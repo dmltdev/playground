@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "functional-javascript-workshop": "^1.0.6",
-    "joi": "^17.8.3"
-  }
-}
