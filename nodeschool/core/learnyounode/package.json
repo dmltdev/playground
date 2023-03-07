@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "joi": "^17.8.3",
+    "learnyounode": "^4.2.2"
+  }
+}
