@@ -9,3 +9,7 @@ function halfValue(par1) {
 
 halfValue(Math.E);
 halfValue(Math.LN10);
+
+let par1 = "5" + 1;
+console.log(par1);
+console.log(typeof par1);
