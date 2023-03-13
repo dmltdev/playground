@@ -1,14 +1,11 @@
-console.log(2e2);
-console.log(2e8);
-console.log(5 * Math.PI);
-console.log(2**8);
-console.log(Math.pow(2,8));
+console.log("Aardvark" < "Zoroaster") // true
 
-let exem = `half of 100 is ${100 / 2}`;
-function halfValue(par1) {
-    par1 = Math.round(par1 * 100) / 100;
-    let par2 = par1 / 2;
-    console.log(`Half of ${par1} is ${par2}`);
-}
+let a = "Aardvarks";
+let b = "Zoroaster";
 
-halfValue(Math.PI);
+console.log(typeof a); // string
+console.log(typeof b); // string
+console.log(a.length); // 8
+console.log(b.length); // 9
+console.log(a.length < b.length); // 
+console.log(a.length >= b.length); // 
