@@ -1,19 +1,18 @@
 <?php
-function expectTwo($first, $second)
-{
-  return "whatever";
-}
- 
-echo expectTwo("test", "why");
+$arr = ["hello", "there"]; // 0, 1
+$arr["young"] = "wizard"; // 3
+$arr[] = ["you", "have"];  // 4
+$arr[0] = "careful";  // does not change
+$arr[4] = "power";  // does not change
+$arr[3] = "terrifying"; // does not change
+$arr[] = "!"; 
+print_r($arr);
 
-$nested_arr = [ 1, 2, [3, 4 , 5, [5, 6], 7], [ [8, [9, 10, 11, [12, 13] ], [14], [15, [16, 17, 18], 19 ] ] ] ];
-echo $nested_arr[3][0][1][1];
-
-$grades = [
-    "Jane" => 98,
-    "Lily" => 74,
-    "Dan" => 88,
-];
+$a1 = ["frog" => "toad", "oats" => "chaf", "bull" => "cow", "dog" => "bone", "north" => "south"];
  
-print_r($grades);
+$a2=["bull" => "row", "dog" => "phone", "syrup" => "wig"];
+ 
+$a3 = $a1 + $a2;
+ 
+$arr = $a3 + ["north" => "mouth", "bread" => "head"];
 ?>
