@@ -23,7 +23,7 @@ array_push($arr, "I’m full"); // "I'm full" is added to the end of the array
  
 unset($arr["dinner"]); // dinner is destroyed
  
-echo count($arr); // counts the number of keys in the array, which is 3: lunch, dessert, I', full
+echo count($arr); // counts the number of keys in the array, which is 3: lnch, dessert, I', full
 
 /* Question */
 function f1(&$array_param) // referenced! 
@@ -62,6 +62,9 @@ $a2=["bull" => "row", "dog" => "phone", "syrup" => "wig"]; // + syrup
 $a3 = $a1 + $a2;
  
 $arr = $a3 + ["north" => "mouth", "bread" => "head"]; // + bread
+
+$varabla = "text";
+echo gettype($varabla);
 
 // Question: How many unique keys are in the array $arr once this code has been run?
 // Answer: 7
