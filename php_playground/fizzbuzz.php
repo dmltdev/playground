@@ -39,7 +39,7 @@ foreach($output as $value) {
 }
 
 // FizzBuzz iterate through array with certain conditions
-echo "\nFizzBuzz iteration through array stops after printing 'FizzBuzz'.\n\n";
+echo "\nFizzBuzz: iteration through array stops after printing 'FizzBuzz'.\n\n";
 
 foreach($output as $value) {
   if ($value === "Fizz") {
