@@ -1,5 +1,4 @@
 <?php
-// Define checkWord() here:
 function checkWord($input, $letter) {
   strtolower($letter);
   if ($_SERVER["REQUEST_METHOD"] === "POST" && $input[0] !== $letter) {
