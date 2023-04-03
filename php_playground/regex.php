@@ -1,5 +1,5 @@
 <?php
-$regex_exp = "/\(?\d\s?\d\d\.?\)?-?\d?\s?\d\d\.?\-?\d\s?\d\d\d\d?/"; // regex
+$regex_exp = "/\(?\d\s?\d\d\.?\)?-?\d?\s?\d\d\.?\-?\d\s?\d\d\d\d?/"; // Unreadable regex for 10/11-digit telephone numbers
 $regex_new = "/^[(]*([0-9]{3})[- .)]*[0-9]{3}[- .]*[0-9]{4}$/"; // Test for 10-digit North American telephone numbers.
 
 // $pattern matches these string
