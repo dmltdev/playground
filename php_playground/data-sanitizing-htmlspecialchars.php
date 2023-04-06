@@ -10,13 +10,13 @@
     <form method="post" action="">
         Enter some HTML:
         <br>
-        <input type="text" name="html">
+        <input type="text" name="html" placeholder="default">
         <br>  
         <input type="submit" value="Submit">
     </form>
     <div>
         You entered:
-        <?= htmlspecialchars($_POST["html"]); ?> 
+        <?= htmlspecialchars($_POST["html"], ENT_QUOTES, "UTF-8"); ?>
     </div>  
 </body>
 </html>
