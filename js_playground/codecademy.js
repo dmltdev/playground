@@ -1,43 +1,28 @@
 let spaceship = {
-    passengers: null,
-    telescope: {
-      yearBuilt: 2018,
-      model: "91031-XLT",
-      focalLength: 2032 
-    },
-    crew: {
-      captain: { 
-        name: 'Sandra', 
-        degree: 'Computer Engineering', 
-        encourageTeam() { console.log('We got this!') },
-       'favorite foods': ['cookies', 'cakes', 'candy', 'spinach'] }
-    },
-    engine: {
-      model: "Nimbus2000"
-    },
-    nanoelectronics: {
-      computer: {
-        terabytes: 100,
-        monitors: "HD"
+  crew: {
+  captain: { 
+      name: 'Lily', 
+      degree: 'Computer Engineering', 
+      cheerTeam() { console.log('You got this!') } 
       },
-      'back-up': {
-        battery: "Lithium",
-        terabytes: 50
+  'chief officer': { 
+      name: 'Dan', 
+      degree: 'Aerospace Engineering', 
+      agree() { console.log('I agree, captain!') } 
+      },
+  medic: { 
+      name: 'Clementine', 
+      degree: 'Physics', 
+      announce() { console.log(`Jets on!`) } },
+  translator: {
+      name: 'Shauna', 
+      degree: 'Conservation Science', 
+      powerFuel() { console.log('The tank is full!') } 
       }
-    }
-  }; 
-  
-  let capFave = spaceship.crew.captain['favorite foods'][0];
-  spaceship.passengers = [
-    {
-      name: 'Michael Jackson',
-      birthdate: '1992-05-22'
-    },
-    {
-      name: 'Kate Lenon',
-      birthdate: '1985-11-07'
-    }
-  ]
-  
-  let firstPassenger = spaceship.passengers[0];
-  console.log(firstPassenger);
+  }
+}; 
+
+// Write your code below
+for (let crewMember in spaceship.crew) {
+console.log(`${spaceship.crew[crewMember].name}: ${spaceship.crew[crewMember].degree}`);
+}
