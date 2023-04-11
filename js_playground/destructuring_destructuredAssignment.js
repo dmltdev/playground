@@ -18,3 +18,22 @@ console.log(residence); // Transylvania
 // and assign it to a variable called day
 const { day } = vampire.preferences; 
 console.log(day); // Prints 'stay inside'
+
+// Sample Object from CodeCademy
+const robot = {
+    model: '1E78V2',
+    energyLevel: 100,
+    functionality: {
+      beep() {
+        console.log('Beep Boop');
+      },
+      fireLaser() {
+        console.log('Pew Pew');
+      },
+    }
+  };
+  
+  // Destructure the functionality property from robot
+  // and assign it to a variable called functionality
+  const { functionality } = robot;
+  functionality.beep();
