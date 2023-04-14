@@ -23,6 +23,7 @@ console.log(robotKeys); // [ 'model', 'energyLevel', 'functionality' ]
 const robotEntries = Object.entries(robot);
 console.log(robotEntries); // [ [ 'model', '1E78V2' ], [ 'energyLevel', 100 ], [ 'functionality', { beep: [Function: beep], fireLaser: [Function: fireLaser] } ] ]
 
+
 // Object.assign() copies all enumerable own properties from one or more source objects to a target object. It returns the target object.
 const robotAssign = Object.assign({laserBlaster: true, voiceRecognition: true}, robot);
 console.log(robotAssign); // { laserBlaster: true, voiceRecognition: true, model: '1E78V2', energyLevel: 100, functionality: { beep: [Function: beep], fireLaser: [Function: fireLaser] } }
@@ -35,8 +36,3 @@ console.log(robotProperty); // true
 const robotValue = robot.valueOf();
 console.log(robotValue); // { model: '1E78V2', energyLevel: 100, functionality: { beep: [Function: beep], fireLaser: [Function: fireLaser] } }
 
-// Object.filter() method creates a new array with all elements that pass the test implemented by the provided function.
-const robotFilter = Object.filter(robot, (key, value) => {
-    return key === 'model';
-});
-console.log(robotFilter); // { model: '1E78V2' }
