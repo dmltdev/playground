@@ -35,3 +35,4 @@ console.log(robotProperty); // true
 // Object.valueOf() returns the primitive value of the specified object.
 const robotValue = robot.valueOf();
 console.log(robotValue); // { model: '1E78V2', energyLevel: 100, functionality: { beep: [Function: beep], fireLaser: [Function: fireLaser] } }
+
