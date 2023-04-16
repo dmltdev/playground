@@ -15,21 +15,21 @@ console.log(array1.reduce(reducer));
 // Example 2
 
 const numbers = [1, 2, 4, 10];
- 
+
 const summedNums = numbers.reduce((accumulator, currentValue) => {
   return accumulator + currentValue
 })
- 
+
 console.log(summedNums) // Output: 17
 
 // Example 3
 
 const numbers2 = [1, 2, 4, 10];
- 
+
 const summedNums2 = numbers2.reduce((accumulator, currentValue) => {
   return accumulator + currentValue
 }, 100)  // <- Second argument for .reduce()
- 
+
 console.log(summedNums2); // Output: 117
 
 // Example 4
@@ -43,3 +43,14 @@ const newSum = newNumbers.reduce((accumulator, currentValue) => {
 }, 10);
 
 console.log(newSum);
+
+// Example 5
+
+const nums = [1, 2, 3, 4];
+const initializer = 90;
+
+const addItUp = nums.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
+}, initializer);
+
+console.log(addItUp);
