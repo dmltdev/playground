@@ -1,12 +1,14 @@
 # Naming Conventions for a Playground
 
-* JS Topic_: Loops/Objects/Control_Flow/etc
+* JS Topic: loops/objects/controlFlow/etc
 * JS Subtopic/Idea/Problem/Solution/Example (if multiword, use camelCase): functionsFactoryFunction.js
 
 ```javascript
-loops_loopingThroughObjects.js
+loops.loopingThroughObjects.js
+array.method.js
+object.isObject.js
 ```
 
 ```php
-library_phpMailer_basicSmtpSetup.php
+library.phpMailer.basicSmtpSetup.php
 ```

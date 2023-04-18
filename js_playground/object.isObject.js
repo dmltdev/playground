@@ -1,13 +1,4 @@
-/*
-Write a JavaScript program to list the properties of a JavaScript object. 
-Sample object:
-var student = {
-  name : "David Rayy",
-  sclass : "VI",
-  rollno : 12 };
-  Sample Output: name,sclass,rollno 
-  */
-  
+// Object.isObject() - How to check if object is an object
   
   // Sample object
   const student = {
@@ -39,11 +30,14 @@ var student = {
   {
     return typeof obj === 'object' && obj !== null && ! Array.isArray(obj)
   }
+
+  // Test Cases
+
   console.log(_keys({red: "#FF0000", green: "#00FF00", white: "#FFFFFF"}));
   console.log(_keys(student));
   
-  var animals = ['tiger', 'lion', 'zebra'];
-  var cup = {color: 'black',    weight: '500gm' };
+  const animals = ['tiger', 'lion', 'zebra'];
+  const cup = {color: 'black',    weight: '500gm' };
   const chart = ['a', 'b', 'c', 'd', 'e', 'f'];
   console.log(typeof chart); //JS treats arrays as objects
   console.log(Array.isArray(chart)); // How to actually check if array is an array
