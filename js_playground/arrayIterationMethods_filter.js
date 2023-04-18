@@ -42,3 +42,11 @@ const longFavoriteWords = favoriteWords.filter((word) => {
   })
 
 console.log(longFavoriteWords); // Output: ['nostalgia', 'hyperbole', 'esoteric']
+
+// Example 6: Compare two arrays with .filter() and .includes() and return a new array with the elements that are the same in both arrays
+
+const justCoolStuff = (arr1, arr2) => {
+    return arr1.filter(item => arr2.includes(item));
+}
+
+console.log(justCoolStuff(['cool', 'awesome', 'rad', 'chen'], ['rad', 'vodka', 'awesome', 'cool'])); // Output: ['cool', 'awesome', 'rad']
