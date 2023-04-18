@@ -11,13 +11,13 @@ console.log(found); // 3
 // Example 2: findIndex() on an array of objects
 
 const inventory = [
-    {name: 'apples', quantity: 2},
-    {name: 'bananas', quantity: 0},
-    {name: 'cherries', quantity: 5}
+  {name: 'apples', quantity: 2},
+  {name: 'bananas', quantity: 0},
+  {name: 'cherries', quantity: 5}
 ];
 
 function isCherries(fruit) {
-    return fruit.name === 'cherries';
+  return fruit.name === 'cherries';
 }
 
 console.log(inventory.findIndex(isCherries)); // 2
@@ -30,8 +30,30 @@ const foundAnimal = animals.findIndex((animal) => {
   return animal === 'elephant';
 })
 
+console.log(foundAnimal); // 7
+
 // Example 4: Find an index of the element that starts with 's' in an array
 
 const startsWithS = animals.findIndex((animal) => {
-    return animal.startsWith('s');
-  })
+  return animal.startsWith('s');
+})
+
+console.log(startsWithS); // 3
+
+// Example 5: 
+
+const findMyKeys = (arr) => {
+  return arr.findIndex((element) => element === "keys");
+};
+
+const randomStuff = [
+  "credit card",
+  "screwdriver",
+  "receipt",
+  "gum",
+  "keys",
+  "used gum",
+  "plastic spoon",
+];
+
+console.log(findMyKeys(randomStuff)); // 4
