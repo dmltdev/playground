@@ -1,3 +1,5 @@
+'use strict';
+
 /*
 Luhn algorithm is a simple checksum formula used to 
 validate a variety of identification numbers, such as credit card numbers, 
@@ -16,25 +18,33 @@ The Luhn Formula:
 -- The check digit (the last number of the card) is the amount that you would need to add to get a multiple of 10 (Modulo 10)
 */
 
-const luhn = (number) => {
-    let sum = 0; // sum of digits
-    let shouldDouble = false; // should double the digit
-    while (number) { // while number is not 0
-        let digit = number % 10; // get the last digit
-        number = Math.floor(number / 10); // remove the last digit
-        if (shouldDouble) { // 
-        digit *= 2; // double the digit
-        if (digit > 9) { // if the digit is greater than 9
-            digit -= 9; // subtract 9 from the digit
-        }
-        }
-        sum += digit; // add the digit to the sum
-        shouldDouble = !shouldDouble; // toggle the shouldDouble flag
+const validateCreditCard = input => {
+
+    if (typeof input !== 'string') {
+        input = input.toString();
     }
-    return sum % 10 === 0; // return true if the sum is divisible by 10
-    };
+
+    let creditCardInt = input.split('').map(Number);
+    
+    for (let i = creditCardInt.length -2; i >= 0; i = i -2) {
+        let tempValue = creditCardInt[i];
+        tempValue *= 2;
+        if (tempValue > 9) {
+            tempValue = tempValue % 10 + 1;
+        }
+        creditCardInt[i] = tempValue;
+    }
+    
+    let total = 0;
+    
+    for (let i = 0; i < creditCardInt.length; i++) {
+        total += creditCardInt[i];
+    }
+    
+    return total % 10 === 0;
+};
 
 // Test
-
-console.log(luhn(79927398713)); // why true? because the last digit is 3
-console.log(luhn(79927398710)); // why false? because the last digit is not 3, but 0
+console.log(validateCreditCard(4929268955333011));
+console.log(validateCreditCard('7992 7398 710'));
+console.log(validateCreditCard(79927398710));
