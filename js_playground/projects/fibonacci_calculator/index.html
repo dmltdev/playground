@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fibonacci Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="custom.scss">
     <script src="https://kit.fontawesome.com/f9932f06b5.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
         <div class="card">
             <h1><i class="fa fa-solid fa-calculator"></i>Fibonacci Number Generator</h1>
+            <hr class="divider d-1 anim">
             <div class="form-wrapper">
-                <form method="post">
+                <form>
                     <label for="fib-select">Generate a</label>
                     <select name="fib-select" id="fib-select">
                         <option value="sequence-option">Sequence</option>
@@ -36,12 +38,17 @@
                         <label for="fib-num">Number</label>
                         <input type="number" name="fib-num" id="fib-num" placeholder="Enter a number">
                     </div>
+
+                    <hr class="divider d-2 anim">
+
                     <!-- Buttons -->
                     <div class="buttons">
                         <button type="button" onclick="clear()" class="btn">Clear</button>
                         <button type="button" onclick="fibCalculate()" class="btn">Generate</button>
                     </div>
                     
+                    <hr class="divider d-3 anim" >
+
                     <!-- Answer -->
                     <div class="answer-container" id="answer-container">
                         <input type="text" name="answer" id="answer" placeholder="Answer" aria-readonly>
