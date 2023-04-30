@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fibonacci Calculator</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="custom.scss">
     <script src="https://kit.fontawesome.com/f9932f06b5.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- The calculator's functionality should be similar to https://www.calculatorsoup.com/calculators/discretemathematics/fibonacci-calculator.php -->
     <div class="container">
         <div class="card">
             <h1><i class="fa fa-solid fa-calculator"></i>Fibonacci Number Generator</h1>
-            <hr class="divider d-1 anim">
             <div class="form-wrapper">
                 <form>
                     <label for="fib-select">Generate a</label>
@@ -36,10 +35,8 @@
                     <!-- Number -->
                     <div class="num-container" id="num-container">
                         <label for="fib-num">Number</label>
-                        <input type="number" name="fib-num" id="fib-num" placeholder="Enter a number">
+                        <input type="number" name="fib-num" id="fib-num" placeholder="1" inputmode="numeric" title="0 or positive integer number..." min="0" max="499">
                     </div>
-
-                    <hr class="divider d-2 anim">
 
                     <!-- Buttons -->
                     <div class="buttons">
@@ -47,11 +44,10 @@
                         <button type="button" onclick="fibCalculate()" class="btn">Generate</button>
                     </div>
                     
-                    <hr class="divider d-3 anim" >
 
                     <!-- Answer -->
                     <div class="answer-container" id="answer-container">
-                        <input type="text" name="answer" id="answer" placeholder="Answer" aria-readonly>
+                        <input type="text" name="answer" id="answer" placeholder="Answer">
                         <span onclick="copyContent()" class="copyContent" id="copyContent"><i class="fa-solid fa-clipboard"></i></span>
                     </div>
                 </form>
