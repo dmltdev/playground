@@ -1,0 +1,66 @@
+// Variables
+@background-color: #f4f4f4;
+@font-family: Tahoma;
+@primary-color: #3b5998;
+@secondary-color: #20B8AA;
+@line-height: 1em + 1em;
+
+// Text Color Mixin
+
+.text-color(@a) when (lightness(@a) >= 50%){
+    color: black;
+}
+.text-color(@a) when (lightness(@a) < 50%) {
+    color: white;
+}
+
+body{
+    background: @background-color;
+    font-family: @font-family;
+    line-height: @line-height;
+}
+
+.primary-text{
+    color: @primary-color;
+    text-decoration:none;
+}
+
+.btn{
+    padding: 10px 15px;
+    border: 0;
+    .border-radius(30px);
+}
+
+.primary-btn:extend(.btn){
+    background: @primary-color;
+    .text-color(@primary-color);
+}
+
+ul#menu{
+    list-style: none;
+    background-color: darken(@secondary-color, 15%);
+    li{
+        padding:10px 0;
+        a{
+            color: @secondary-color;
+            text-decoration: none;
+            &:hover{
+                color: #000;
+            }
+        }
+    }
+}
+
+.bordered{
+    border-top: dotted 1px #000;
+    border-bottom: solid 2px #000;
+}
+
+h1,h3{
+    .bordered
+}
+
+.border-radius(@radius){
+    border-radius: @radius;
+}
+
