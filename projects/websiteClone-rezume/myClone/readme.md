@@ -1,0 +1,1 @@
+# A clone of the portfolio template using SASS, jQuery and Webpack
