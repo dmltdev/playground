@@ -1,12 +1,10 @@
 {
-  "name": "bootstrap-project-001",
+  "name": "dl-educatio",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass-dev": "sass --watch --update --style=expanded scss:css",
-    "sass-prod": "sass --no-source-map --style=compressed scss:css"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Dmytro Lutsenko <hone.domitoro@gmail.com> (https://dmytrolutsenko.com)",
