@@ -17,12 +17,32 @@
 */
 
 /*
-================================================== 0. General styles ==================================================
+================================================== 0. General styles & Theme ==================================================
 */
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+$primary-color: rgb(1,4,2);
+$secondary-color: rgb(225, 244, 229);
+$btn-primary: rgb(125, 207, 142);
+$btn-secondary: rgb(199, 234, 207);
+$accent: rgb(106, 200, 126);
+
+// Font
+
+$font-stack: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+body {
+    background-color: $secondary-color;
+    color: $primary-color;
+}
 
 /*
 ================================================== 1. Navbar ==================================================
 */
+
+.img-logo {
+    max-height: 3rem;
+}
 
 /*
 ================================================== 2. Hero ==================================================
