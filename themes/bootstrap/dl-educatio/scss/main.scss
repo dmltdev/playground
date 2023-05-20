@@ -5,7 +5,7 @@
 ================================================== Table of Contents ==================================================
 0. General styles (fonts, colors, etc)
 1. Navbar
-2. Hero
+2. Carousel
 3. About
 4. Features
 5. Courses
@@ -69,7 +69,7 @@ body {
 ================================================== 1. Navbar ==================================================
 */
 
-.img-logo {
+.img-custom {
     max-height: 36px;
     /* TODO Come up with some fancy animation when hovering over the img-logo.
     &::after {
@@ -86,8 +86,16 @@ body {
 }
 
 /*
-================================================== 2. Hero ==================================================
+================================================== 2. Carousel ==================================================
 */
+
+#carouselPrimary > .carousel-inner {
+    height: 800px;
+    width:100%;
+    img {
+        background-size: cover;
+    }
+}
 
 /*
 ================================================== 3. About ==================================================
@@ -122,6 +130,7 @@ body {
     border-radius: 50% !important;
     border: 0;
     padding: 8px 13px;
+    z-index: 100;
     }
 
     
