@@ -30,13 +30,10 @@
 //$light:    
 //$dark:     
 
-$text-primary: rgb(14, 6, 30) !important;
-$background: rgb(225, 244, 229) !important;
 $primary: rgb(14, 6, 30) !important;
-$secondary: rgb(255, 255, 255) !important;
-$primary-btn: rgb(78, 106, 21);
-$secondary-btn: rgb(246, 242, 252);
-$accent: rgb(16, 21, 4) !important;
+$light-green: rgb(225, 244, 229) !important;
+$accent: #0071B6 !important;
+$secondary: rgb(246, 242, 252) !important;
 
 // Font
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
@@ -44,15 +41,18 @@ $accent: rgb(16, 21, 4) !important;
 $font-stack: 'Poppins', Arial, "Helvetica Neue", Helvetica, sans-serif;
 
 body {
-    background-color: $background;
     font-family: $font-stack;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .btn-primary { 
     background-color: $primary;
     border: 1px solid $primary;
     &:hover {
-        background-color: $accent;
+        background-color: $primary;
         border: 1px solid $primary;
     }
 }
@@ -60,14 +60,31 @@ body {
 .bg-accent {
     background-color: $accent;
 }
+.text-accent {
+    color: $accent;
+}
 
 .bg-primary {
     background-color: $primary;
+}
+.text-primary {
+    color: $primary;
+}
+
+// *Disallow user interacting with the element
+.no-interaction {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 /*
 ================================================== 1. Navbar ==================================================
 */
+
+.nav-custom {
+    z-index: 1000;
+}
 
 .img-custom {
     max-height: 36px;
@@ -89,12 +106,16 @@ body {
 ================================================== 2. Carousel ==================================================
 */
 
-#carouselPrimary > .carousel-inner {
-    height: 800px;
+#carouselPrimary .carousel-inner {
+    height: 700px;
     width:100%;
     img {
         background-size: cover;
     }
+}
+
+#carouselPrimary .carousel-caption {
+    bottom: 65%;
 }
 
 /*
@@ -104,6 +125,10 @@ body {
 /*
 ================================================== 4. Features ==================================================
 */
+
+.feature-icons i {
+    font-size: 100px;
+}
 
 /*
 ================================================== 5. Courses ==================================================
@@ -131,6 +156,7 @@ body {
     border: 0;
     padding: 8px 13px;
     z-index: 100;
+    filter: drop-shadow(4px 4px 2px rgb(14, 6, 30));
     }
 
     
