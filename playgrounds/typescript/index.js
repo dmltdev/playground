@@ -1,4 +1,4 @@
-var Person = {
+const Person = {
     firstName: "Matt",
     lastName: "Monroe",
     birthdate: {
@@ -9,3 +9,4 @@ var Person = {
     hobbies: ['Sci-fi', 'Dystopian books', 'Gym', 'Yoga', 'Running'],
 };
 console.log(Person);
+//# sourceMappingURL=index.js.map
