@@ -10,3 +10,4 @@ const Person : {firstName?: string, lastName?: string, birthdate?: object, hobbi
 };
 
 console.log(Person);
+// TODO Fix the issue with the implicit conversion of the "Person" variable type from "const" to "var"
