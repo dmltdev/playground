@@ -1,5 +1,5 @@
 // Import the function to be tested
-const { describeAge } = require('../describeAge.js');
+const describeAge = require('../describeAge.js');
 
 // Test cases
 describe('describeAge', () => {
