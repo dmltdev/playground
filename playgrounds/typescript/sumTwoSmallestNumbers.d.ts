@@ -1,1 +1,1 @@
-declare const sumTwoSmallestNumbers: any, number: any;
+declare const sumTwoSmallestNumbers: (numbers: number[]) => number;
