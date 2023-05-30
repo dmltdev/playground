@@ -10,7 +10,7 @@ function removeSmallest(numbers:number[]):number[] {
 function removeSmallest2(numbers:number[]):number[] {
     let indexOfMin = numbers.indexOf(Math.min(...numbers));
     return [...numbers.slice(0, indexOfMin), ...numbers.slice(indexOfMin + 1)];
-  }
+}
 
 
 let nums = [1, 2, 3, 4, 5];
