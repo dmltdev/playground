@@ -7,8 +7,8 @@ function createCounter(init) {
     };
 }
 ;
-let counter = createCounter(5);
-counter.increment();
-counter.reset();
-counter.decrement();
+let counter = createCounter(5); //?
+counter.increment(); //?
+counter.reset(); //?
+counter.decrement(); //?
 //# sourceMappingURL=counter2.js.map
