@@ -5,6 +5,7 @@ function removeSmallest(numbers) {
     res.splice(indexOfSmallest, 1);
     return res;
 }
+// More concise version
 function removeSmallest2(numbers) {
     let indexOfMin = numbers.indexOf(Math.min(...numbers));
     return [...numbers.slice(0, indexOfMin), ...numbers.slice(indexOfMin + 1)];

@@ -1,3 +1,13 @@
+/*
+const containsDuplicate = (nums: number[]): boolean => {
+    let arr:any = new Set(nums);
+    arr = Array.from(arr);
+    let result:boolean = nums.every((element, index) => {
+        return element === arr[index];
+    })
+    return !result;
+}
+*/
 const containsDuplicate = (nums) => {
     let ht = {};
     for (let i = 0; i < nums.length; i++) {
