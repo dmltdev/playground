@@ -29,6 +29,7 @@ class Stack {
 // !Testing
 
 let stack = new Stack();
+console.log(stack.isEmpty());
 
 stack.push(5);
 stack.push(6);
