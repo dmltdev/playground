@@ -7,6 +7,7 @@ Playing with different languages and libraries, solving leetcode & codewars, tes
 * JavaScript (primary)
 * TypeScript
 * PHP
-* HTML & CSS, SCSS
+* HTML & CSS
+* jQuery & SASS
 * Bootstrap & Tailwind CSS
 * SQL
