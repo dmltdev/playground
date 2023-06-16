@@ -1,15 +1,2 @@
-# domitoro.github.io
-
-## Playgrounds
-
-### Frontend Playground
-### JS Playground
-### PHP Playground
-### Python Playground
-
-## Projects
-
-### Credit Card Validation Checker with Lehn algorithm [JavaScript]
-### Hex Random Color [JavaScript]
-
-Regular paragraph
+# Domitoro Playgrounds
+Playing with different languages and libraries, solving leetcode & codewars, testing, etc.
