@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicing window.location</title>
+</head>
+<body>
+    <p id="href">window.location.href</p>
+    <p id="hostname">window.location.hostname</p>
+    <p id="pathname">window.location.pathname</p>
+    <p id="port">window.location.port</p>
+    <p id="protocol">window.location.hostname</p>
+    <input type="button" value="Load new document" onclick="newDocument()">
+    <script>
+        document.getElementById("href").innerHTML = "Page location is " + window.location.href;
+        document.getElementById("hostname").innerHTML = "Page hostname is " + window.location.hostname;
+        document.getElementById("pathname").innerHTML = "Page pathname is " + window.location.pathname;
+        document.getElementById("port").innerHTML = "Page port is " + window.location.port; // Most browsers will not display default port numbers (80 for http and 443 for https)
+        document.getElementById("protocol").innerHTML = "Page protocol is " + window.location.protocol;
+        
+        function newDocument() {
+            window.location.assign("https://www.w3schools.com")
+        }
+    </script>
+</body>
+</html>
