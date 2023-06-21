@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test file for URLSearchParams.js</title>
+</head>
+<body>
+    <h2>Test file for URLSearchParams.js</h2>
+    <form method="GET">
+        <p>Test form with GET method and hidden inputs</p>
+        <input type="hidden" name="sub1" value="subid" />
+        <input type="hidden" name="pixel" value="123456" />
+        <input type="hidden" name="pixel" value="123456_duplicate" />
+        <input type="hidden" name="sub2" value="sub2_value" />
+        <input type="hidden" name="sub3" value="sub3_value" />
+        <input type="hidden" name="sub4" value="sub4_value" />
+        <input type="submit" value="Submit GET">
+    </form>
+    
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const params = Array.from(urlParams.entries()); // [['sub1', 'subid'], ['pixel', '123456'], ['pixel', '123456_duplicate'], ['sub2', 'sub2_value'], ...]
+        console.log(params);
+        
+        /*
+        // Testing .get()
+        const [pixel, sub1, sub2] = [
+        urlParams.get('pixel'),
+        urlParams.get('sub1'),
+        urlParams.get('sub2')
+        ];
+        console.log("pixel:", pixel); // pixel: 123456
+        console.log("sub1:", sub1); // sub1: subid
+        console.log("sub2:", sub2); // sub2: sub2_value
+        
+        // Testing .getAll()
+        console.log(urlParams.getAll('pixel')); // ['123456', '123456_duplicate']
+        */
+        
+        // Iterating over URLSearchParams
+        const
+        keys = urlParams.keys(),
+        values = urlParams.values(),
+        entries = urlParams.entries();
+        
+        for (const key of keys) console.log("key:", key);
+        
+        for (const value of values) console.log("value:", value);
+        
+        for(const entry of entries) console.log(`Entry pairs | ${entry[0]}: ${entry[1]}`);
+    </script>
+</body>
+</html>
