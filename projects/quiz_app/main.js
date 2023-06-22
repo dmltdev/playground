@@ -1,10 +1,13 @@
-const startButton = document.getElementById('start-btn');
-const nextButton = document.getElementById('next-btn');
-const questionContainerElement = document.getElementById('question-container');
-const questionElement = document.getElementById('question');
-const answerButtonsElement = document.getElementById('answer-buttons');
+const startButton = document.getElementById('start-btn')
+const nextButton = document.getElementById('next-btn')
+const resultsButton = document.getElementById('results-btn')
+const answerButtonsElement = document.getElementById('answer-buttons')
+const questionContainerElement = document.getElementById('question-container')
+const resultContainerElement = document.getElementById('result-container')
+const resultMessage = document.getElementById('result-msg')
+const questionElement = document.getElementById('question')
 
-let shuffledQuestions, currentQuestionIndex;
+let shuffledQuestions, currentQuestionIndex, correctAnswers;
 
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
@@ -12,11 +15,15 @@ nextButton.addEventListener('click', () => {
     setNextQuestion();
     
 });
+resultsButton.addEventListener('click', () => {
+    calculateResults();
+})
 
 function startGame() {
     startButton.classList.add('hide');
     shuffledQuestions = questions.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;
+    correctAnswers = 0;
     questionContainerElement.classList.remove('hide');
     setNextQuestion();
 }
@@ -43,6 +50,8 @@ function showQuestion(question) {
 function resetState() {
     clearStatusClass(document.body);
     nextButton.classList.add('hide');
+    resultsButton.classList.add('hide');
+    resultContainerElement.classList.add('hide');
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }
@@ -55,11 +64,16 @@ function selectAnswer(e) {
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
+    if (correct) {
+        correctAnswers++;
+        console.log(correctAnswers);
+    }
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide');
     } else {
         startButton.innerText = 'Restart';
         startButton.classList.remove('hide');
+        resultsButton.classList.remove('hide');
     }
 }
 
@@ -75,6 +89,38 @@ function setStatusClass(element, correct) {
 function clearStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong');
+}
+
+function calculateResults() {
+    clearStatusClass(document.body);
+    questionContainerElement.classList.add('hide');
+    resultContainerElement.classList.remove('hide');
+    resultsButton.classList.add('hide');
+    startButton.innerText = 'Restart';
+
+    let answeredQuestions = currentQuestionIndex + 1;
+    let score = Math.floor(correctAnswers / answeredQuestions * 100);
+    
+    let scoreText = '';
+
+    switch (true) {
+        case score >= 0 && score <= 50:
+            scoreText = `😐 You scored ${score}%. Please try again. You've got this!`;
+            break;
+        case score > 50 && score <= 70:
+            scoreText = `😌 You scored ${score}%! Way to go!`;
+            break;
+        case score > 70 && score <= 90:
+            scoreText = `😇 You scored ${score}%! Great result!`;
+            break;
+        case score === 100:
+            scoreText = `🤩 Brilliant result: ${score}%. Congratulations!`;
+            break;
+        default:
+            scoreText = `Your score: ${score}%`;
+    }
+
+    resultMessage.innerText = scoreText;
 }
 
 const questions = [
@@ -131,5 +177,9 @@ const questions = [
             { text: '9', correct: false },
             { text: '7', correct: true}
         ]
-    },
+    }
 ]
+
+// TODO Shuffled answers
+// TODO Results should provide not only the subtotal score, but give a feedback about the user's choice.
+// *For example, I can include an additional property "explanation" inside the answers' objects that should show next to each question that will be displayed in the result scenario.
