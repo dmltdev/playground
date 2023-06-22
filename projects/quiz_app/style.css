@@ -31,11 +31,20 @@ body.wrong {
 
 .container {
     width: 800px;
+    height: 400px;
     max-width: 80%; /* So the content does not overflow the page */
     background-color: white;
     border-radius: 5px;
     padding: 10px;
-    box-shadow: 0 0 10px 1px
+    box-shadow: 0 0 10px 1px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#question {
+    font-size: 20px;
 }
 
 .btn-grid {
@@ -54,6 +63,35 @@ body.wrong {
     color: white;
     outline: none;
     cursor: pointer;
+    width: 160px;
 }
 
-/* stopped watching the video https://www.youtube.com/watch?v=riDzcEQbX6k&list=WL&index=2 at 10:27 */
+.btn:hover {
+    border-color: black;
+}
+
+.btn.correct {
+    --hue: var(--hue-correct);
+    color: black;
+}
+
+.btn.wrong {
+    --hue: var(--hue-wrong);
+}
+
+.start-btn, .next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 0px 5px;
+}
+
+.controls {
+    display: flex;
+    justify-content:end;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
