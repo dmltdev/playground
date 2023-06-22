@@ -183,3 +183,4 @@ const questions = [
 // TODO Shuffled answers
 // TODO Results should provide not only the subtotal score, but give a feedback about the user's choice.
 // *For example, I can include an additional property "explanation" inside the answers' objects that should show next to each question that will be displayed in the result scenario.
+// TODO  Зробити лідерборд (scoreboard), зберігати результатів юзерів у датабазу та потім показувати це у scoreboard.html
