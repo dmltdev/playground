@@ -33,8 +33,10 @@ function phoneWords(stringOfNums) {
 
     for (let i = 0; i < stringOfNums.length; i++) {
         let sameLetter = false;
-        while (sameLetter === false) {
-            if (i-1 === sameLetter) {
+        while (sameLetter) {
+            if (i+1 === sameLetter) {
+                sameLetter = true;
+            } else {
                 
             }
         }
