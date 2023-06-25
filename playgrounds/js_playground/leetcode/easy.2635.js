@@ -11,15 +11,15 @@ Please solve it without the built-in Array.map method.
 */
 
 const map = function(arr, fn) {
-    let res = [];
-    arr.forEach((element, index) => {
-        let temp = fn(element, index);
-        res.push(temp)
-    })
+    let res = new Int32Array(arr.length);
+    for (let i = 0; i < arr.length; i++) {
+        res[i] = fn(arr[i], i)
+    }
     return res;
 }
 
-let arr1 = [1,2,3];
-let fn1 = function plusone(n) { return n+1};
+let arr1 = [1,2,3]
 
-console.log(map(arr1, fn1));
+let fn1 = function plusone(n,i) { return n + i};
+
+map(arr1,fn1) //?.
