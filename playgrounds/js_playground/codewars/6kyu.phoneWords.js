@@ -18,27 +18,59 @@ Return a lowercase string.
 
 */
 
-function phoneWords(stringOfNums) {
+function phoneWords(input) {
+    const keyPads = {
+        '0': ' ',
+        '1': 'separator', //! Separate letters with the same number
+        '2': 'abc',
+        '3': 'def',
+        '4': 'ghi',
+        '5': 'jkl',
+        '6': 'mno',
+        '7': 'pqrs',
+        '8': 'tuv',
+        '9': 'wxyz'
+    };
+    
     let result = '';
-    let keyPads = [
-        ['a','b','c'],
-        ['d','e','f'],
-        ['g','h','i'],
-        ['j','k','l'],
-        ['m','n','o'],
-        ['p','q','r','s'],
-        ['t','u','v'],
-        ['w','x','y','z'],
-    ];
-
-    for (let i = 0; i < stringOfNums.length; i++) {
-        let sameLetter = false;
-        while (sameLetter) {
-            if (i+1 === sameLetter) {
-                sameLetter = true;
+    let currentChar = '';
+    let prevChar = '';
+    let consecutiveCount = 0;
+    
+    for (let i = 0; i < input.length; i++) {
+        currentChar = input[i];
+        
+        if (currentChar === '0') {
+            result += ' ';
+            continue;
+        }
+        
+        if (currentChar === '1') {
+            if (prevChar !== '') {
+                result += prevChar;
+                prevChar = '';
+                consecutiveCount = 0;
+            }
+            continue;
+        }
+        
+        const letters = keyPads[currentChar];
+        if (letters !== undefined) {
+            const maxIndex = Math.max(0, consecutiveCount - 1);
+            const letter = letters[maxIndex];
+            
+            if (maxIndex === letters.length - 1 && prevChar !== '1') {
+                result += letter;
+                prevChar = letter;
+                consecutiveCount = 0;
             } else {
-                
+                prevChar = letter;
+                consecutiveCount++;
             }
         }
     }
+    
+    return result;
 }
+
+console.log(phoneWords('443355555566604466690277733099966688'));
