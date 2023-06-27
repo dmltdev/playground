@@ -30,7 +30,7 @@ function squareOrSquareRoot(array) {
     }
     */
     
-//! Solution 2: A simpler imperative solution that relies on using a modulo operator. The most performant and elegant one.
+//! Solution 2: A simpler imperative solution that relies on using a modulo operator to check if the number is integer or floating. The most performant and elegant solution.
 function squareOrSquareRoot(array) {
     let result = [];
     for (let i = 0; i < array.length; i++) {
