@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileSaver.JS: Practice</title>
+</head>
+<body>
+    <input type="text" name="file-content" id="file-content" placeholder="File Content">
+    <input type="text" name="file-name" id="file-name" placeholder="File Name">
+    <button type="submit" onclick="Generate()">Download file</button>
+
+    <script src="FileSaver.js"></script>
+    <script>
+        function Generate() {
+            let name = document.getElementById('file-name').value;
+            let text = document.getElementById('file-content').value;
+            
+            let blob = new Blob([text], {type: "text/plain;charset=utf-8"});
+            saveAs(blob, name);
+        }
+    </script>
+</body>
+</html>
