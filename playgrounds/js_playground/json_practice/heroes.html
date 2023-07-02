@@ -27,7 +27,7 @@
             const response = await fetch (request);
             const superHeroes = await response.json();
 
-            populateHeader(superHeroes);
+            populateHeader(superHeroes)
             populateHeroes(superHeroes)
         }
 
