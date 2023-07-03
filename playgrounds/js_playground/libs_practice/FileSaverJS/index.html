@@ -4,21 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FileSaver.JS: Practice</title>
+    <style>
+        .active {
+            display: block;
+        }
+        .hidden {
+            display: none;
+        }
+        
+        input, button {
+            display: block;
+        }
+        
+        input,button {
+            padding: 10px;
+            margin: 5px 20px;
+        }
+        button[type="submit"] {
+            background-color: white;
+            border-radius: 6px;
+            padding: 12px;
+            font-size: 16px;
+        }
+        button[type="submit"]:hover {
+            background-color: black;
+            color: white;
+        }
+        .custom-file-input {
+            color: transparent;
+        }
+        .custom-file-input::-webkit-file-upload-button {
+            visibility: hidden;
+        }
+        .custom-file-input::before {
+            content: 'Upload .zip file';
+            color: black;
+            display: inline-block;
+            background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+            border: 1px solid #999;
+            border-radius: 3px;
+            padding: 5px 8px;
+            outline: none;
+            white-space: nowrap;
+            -webkit-user-select: none;
+            user-select: none;
+            cursor: pointer;
+            text-shadow: 1px 1px #fff;
+            font-weight: 700;
+            font-size: 10pt;
+        }
+        .custom-file-input:hover::before {
+            border-color: black;
+        }
+        .custom-file-input:active {
+            outline: 0;
+        }
+    </style>
 </head>
 <body>
-    <input type="text" name="file-content" id="file-content" placeholder="File Content">
-    <input type="text" name="file-name" id="file-name" placeholder="File Name">
-    <button type="submit" onclick="Generate()">Download file</button>
-
+    <input class="custom-file-input" type="file" name="file-upload" id="file-upload" placeholder="Select .zip archive" accept=".zip">
+    
+    <div class="settings">
+        <p>Settings</p>
+        <label for="checkbox-minifyHTML">Minify HTML</label>
+        <input type="checkbox" name="minifyHTML" id="checkbox-minifyHTML">
+    </div>
+    
+    
+    <label for="zip-name">Specify archive name (without .zip)</label>
+    <input type="text" name="file-name" id="zip-name" placeholder="Archive Name (optional)">
+    
+    <button class="active" type="submit" id="file-generator">Generate file</button>
+    <button class="hidden" type="submit" id="file-receiver">Download file</button>
+    
+    <script src="jszip.js"></script>
     <script src="FileSaver.js"></script>
-    <script>
-        function Generate() {
-            let name = document.getElementById('file-name').value;
-            let text = document.getElementById('file-content').value;
-            
-            let blob = new Blob([text], {type: "text/plain;charset=utf-8"});
-            saveAs(blob, name);
-        }
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
