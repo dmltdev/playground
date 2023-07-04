@@ -1,8 +1,60 @@
-// https://www.freecodecamp.org/news/implementing-a-linked-list-in-javascript/
+/*
+876. Middle of the Linked List
+
+Given the head of a singly linked list, return the middle node of the linked list.
+
+If there are two middle nodes, return the second middle node.
+
+ 
+
+Example 1:
+
+
+Input: head = [1,2,3,4,5]
+Output: [3,4,5]
+Explanation: The middle node of the list is node 3.
+Example 2:
+
+
+Input: head = [1,2,3,4,5,6]
+Output: [4,5,6]
+Explanation: Since the list has two middle nodes with values 3 and 4, we return the second one.
+*/
+
+const middleNode = function(head) {
+    let count = 0;
+    let current = head;;
+    while (current) {
+        count++;
+        current = current.next;
+    }
+    
+    if (count % 2 === 0) {
+        let index = count / 2;
+        let temp = head;
+        while (index) {
+            temp.next;
+            temp = temp.next;
+            index--;
+        }
+        return temp;
+    } else {
+        let index = Math.ceil(count / 2) - 1;
+        let temp = head;
+        while (index) {
+            temp.next;
+            temp = temp.next;
+            index--;
+        }
+        return temp;
+    }
+};
+
+//! Tests
 
 class ListNode {
-    constructor (data) {
-        this.data = data
+    constructor (val) {
+        this.val = val
         this.next = null
     }   
 }
@@ -13,8 +65,8 @@ class LinkedList {
         this.next = null
     }
     
-    push(data) {
-        let newNode = new ListNode(data);
+    push(val) {
+        let newNode = new ListNode(val);
         
         newNode.next = this.head;
         this.head = newNode;
@@ -120,33 +172,11 @@ class LinkedList {
     }
 }
 
-//! Tests
 let list = new LinkedList();
-for (let i = 0; i < 11; i++) { // push 11 nodes to linked list
-    list.push(i)
+for (let i = 1; i < 8; i++) {
+    list.push(i);
 }
 
-const reverseList = function(linkedList) {
-    let head = linkedList.head; // head node of the linked list
-    if (head === null) return; // the function immediately returns if there is nothing to reverse
-    
-    let currentNode = head; // keep track of current node being processed
-    let prevNode = null; // keep track of the previous node
-    let nextNode = null; // temporarily store the next node in the original list
-    
-    while (currentNode) { // iterate until null
-        nextNode = currentNode.next; // preserve the reference to the next node before modifying it
-        currentNode.next = prevNode; // reverse the link from the current node to the previous node
-        prevNode = currentNode; // the current node becomes the previous node
-        currentNode = nextNode; // moves current node to the next node for further iteration
-    }
-    
-    head = prevNode; // prevNode points to the new head of the reversed list
-    return head;
-}
+console.log(list);
 
-console.log(list)
-console.log(reverseList(list))
-console.log(list.detectLoop());
-console.log(list.detectLoop2());
-export default LinkedList;
+console.log(middleNode(list.head));
