@@ -1,4 +1,4 @@
-const Page = () => {
+export default function Page () {
 	return (
 		<>
 			<main className="main-content">
@@ -15,5 +15,3 @@ const Page = () => {
 		</>
 	);
 };
-
-export default Page;
