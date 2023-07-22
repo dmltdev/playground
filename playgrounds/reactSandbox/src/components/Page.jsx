@@ -1,10 +1,10 @@
-export default function Page () {
+export default function Page() {
 	return (
 		<>
 			<main className="main-content">
 				<p>
-					Hi there! Welcome to my &#34;About Me&#34; page. I am a passionate
-					React developer, and I enjoy building amazing web
+					Hi there! Welcome to my &#34;About Me&#34; page. I am a
+					passionate React developer, and I enjoy building amazing web
 					applications using the latest technologies.
 				</p>
 				<p>
@@ -14,4 +14,4 @@ export default function Page () {
 			</main>
 		</>
 	);
-};
+}
