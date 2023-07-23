@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import "./App.css";
 
 import Header from "./components/Header";
@@ -14,8 +14,9 @@ class App extends Component {
 				<Greet />
 				<Header />
 				<Page />
-				<Footer />
 				<ControlledComponent />
+				<Footer />
+				
 			</div>
 		);
 	}
