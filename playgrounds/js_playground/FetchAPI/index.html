@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+      defer
+    ></script>
+    <script src="index.js" defer></script>
+    <style>
+      .box {
+        border-radius: 6px;
+        border: 1px solid lightgray;
+        overflow: scroll;
+        resize: both;
+      }
+      .code {
+        white-space: pre;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="fetch-btn" type="button" title="fetch"> Fetch data </button>
+    <input
+      class="fetch-url"
+      type="text"
+      name="fetch-url"
+      id="fetch-url"
+      placeholder="http://"
+    />
+    <h4>Links for testing</h4>
+    <ul>
+      <li>http://127.0.01:5500/tsconfig.json</li>
+    </ul>
+    <h3>Response:</h3>
+    <div class="box">
+      <pre>
+            <code class="language-javascript fetch-response">
+
+            </code>
+        </pre>
+    </div>
+  </body>
+</html>
