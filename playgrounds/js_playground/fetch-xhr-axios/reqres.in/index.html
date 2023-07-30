@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- <script src="xhr.js" defer></script> -->
-    <script src="fetch.js" defer></script>
+    <!-- <script src="fetch.js" defer></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="axios.js" defer></script>
     <style>
       *,
       *::before,
@@ -16,11 +18,6 @@
         margin: 0;
         padding: 0;
         font-family: "Poppins", sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100vh;
       }
       .btn {
         border: 0;
@@ -34,23 +31,6 @@
         opacity: 1;
         transition: 0.3s;
       }
-      .response {
-        border: 1px solid lightgray;
-        border-radius: 4px;
-        padding: 16px;
-        margin: 16px;
-        color: blueviolet;
-        font-weight: 500;
-        width: 200px;
-        height: 200px;
-        overflow: hidden;
-        resize: both;
-      }
-
-      ::webkit-resizer {
-        background-color: red;
-        position: relative;
-      }
       .box {
         border: 1px solid lightgray;
         border-radius: 4px;
@@ -62,16 +42,9 @@
         justify-content: space-between;
         align-items: center;
       }
-      .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-      }
     </style>
   </head>
   <body>
-    <div class="container">
       <div class="box">
         <button
           class="get-btn btn"
@@ -90,7 +63,5 @@
           POST
         </button>
       </div>
-      <div class="response"> </div>
-    </div>
   </body>
 </html>

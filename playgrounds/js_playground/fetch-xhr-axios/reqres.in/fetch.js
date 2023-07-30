@@ -1,6 +1,5 @@
 const getBtn = document.querySelector(".get-btn");
 const postbtn = document.querySelector(".post-btn");
-const responseBox = document.querySelector(".response");
 
 const sendHttpRequest = (method, url, data) => {
   return fetch(url, {
@@ -23,7 +22,6 @@ const getData = () => {
   return sendHttpRequest("GET", "https://reqres.in/api/users").then(
     responseData => {
       console.log(responseData);
-      responseBox.innerText = responseData;
     }
   );
 };
@@ -31,11 +29,10 @@ const getData = () => {
 const sendData = () => {
   sendHttpRequest("POST", "https://reqres.in/api/register", {
     email: "eve.holt@reqres.in",
-    // password: "pistol",
+    password: "pistol",
   })
     .then(responseData => {
       console.log(responseData);
-      responseBox.innerText = responseData;
     })
     .catch(err => {
       console.log(err);
