@@ -35,11 +35,18 @@ function openOrSenior(data){
 */
 
 //! Shorter solution using destructing assignment, array.map and ternary operator
-function openOrSenior(data){
-    return data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Open');
+function openOrSenior(data) {
+  return data.map(([age, handicap]) =>
+    age > 54 && handicap > 7 ? "Senior" : "Open",
+  );
 }
 
 //!Tests
 
-let data1 = [[45, 12],[55,21],[19, -2],[104, 20]];
+let data1 = [
+  [45, 12],
+  [55, 21],
+  [19, -2],
+  [104, 20],
+];
 openOrSenior(data1);

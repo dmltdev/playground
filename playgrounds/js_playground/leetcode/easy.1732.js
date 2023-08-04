@@ -34,9 +34,10 @@ const largestAltitude = function(gain) {
 */
 
 // !Solution 2 | O(1)
-const largestAltitude = gain => {
-    return Math.max(...gain.reduce((acc, cv, i) => (acc.push(cv + acc[i]), acc), [0]))
-}
+const largestAltitude = (gain) => {
+  return Math.max(
+    ...gain.reduce((acc, cv, i) => (acc.push(cv + acc[i]), acc), [0]),
+  );
+};
 
-
-console.log(largestAltitude([-5, 1, 5, 0, -7]))
+console.log(largestAltitude([-5, 1, 5, 0, -7]));

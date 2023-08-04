@@ -30,8 +30,7 @@ function alternate(n, firstValue, secondValue){
 */
 
 // Recursive solution:
-const alternate = (n, a, b) => n ? [a, ...alternate(n-1, b, a)] : [];
-
+const alternate = (n, a, b) => (n ? [a, ...alternate(n - 1, b, a)] : []);
 
 console.log(alternate(1, true, false));
-console.log(alternate(1, 'ttvmq', 'xuvrul'));
+console.log(alternate(1, "ttvmq", "xuvrul"));

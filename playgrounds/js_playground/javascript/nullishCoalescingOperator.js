@@ -1,5 +1,5 @@
 function nullishCoalescing(value, defaultValue) {
-    return value ?? defaultValue;
+  return value ?? defaultValue;
 }
 
 let name = null;

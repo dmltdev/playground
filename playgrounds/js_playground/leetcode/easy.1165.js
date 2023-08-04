@@ -37,15 +37,15 @@ word[i] is an English lowercase letter.
 
 //! Using for loop and two pointers
 const calculateTime = function (keyboard, word) {
-	let res = 0,
-		previousIndex = 0,
-		currentIndex = 0;
-	for (let i = 0; i < word.length; i++) {
-		previousIndex = currentIndex;
-		currentIndex = keyboard.indexOf(word[i]);
-		res += Math.abs(currentIndex - previousIndex);
-	}
-	return res;
+  let res = 0,
+    previousIndex = 0,
+    currentIndex = 0;
+  for (let i = 0; i < word.length; i++) {
+    previousIndex = currentIndex;
+    currentIndex = keyboard.indexOf(word[i]);
+    res += Math.abs(currentIndex - previousIndex);
+  }
+  return res;
 };
 
 //! Using spread operator and array.prototype.reduce() method.

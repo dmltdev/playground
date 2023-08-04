@@ -29,21 +29,21 @@ const isAnagram = function(s, t) {
 */
 
 //! Solution 2: Declarative approach using array.every and initiailizing const variables for sorted arrays.
-const isAnagram = function(s, t) {
-    if (s.length !== t.length) {
-        return false;
-    }
+const isAnagram = function (s, t) {
+  if (s.length !== t.length) {
+    return false;
+  }
 
-    const sortedS = s.split('').sort();
-    const sortedT = t.split('').sort();
+  const sortedS = s.split("").sort();
+  const sortedT = t.split("").sort();
 
-    return sortedS.every((char, index) => char === sortedT[index]);
+  return sortedS.every((char, index) => char === sortedT[index]);
 };
 
-let s = 'anagram'
-let t = 'nagaram'
-let s2 = 'cat'
-let t2 = 'rat'
+let s = "anagram";
+let t = "nagaram";
+let s2 = "cat";
+let t2 = "rat";
 
-console.log(isAnagram(s,t))
-console.log(isAnagram(s2,t2));
+console.log(isAnagram(s, t));
+console.log(isAnagram(s2, t2));

@@ -1,16 +1,12 @@
 function factorialize(num) {
-    // If the number is less than 0, reject it.
-    if (num < 0) 
-          return -1;
-      
-    // If the number is 0, its factorial is 1.
-    else if (num == 0) 
-        return 1;
-      
-    // Otherwise, call the recursive procedure again
-      else {
-          return (num * factorialize(num - 1));
-          /* 
+  // If the number is less than 0, reject it.
+  if (num < 0) return -1;
+  // If the number is 0, its factorial is 1.
+  else if (num == 0) return 1;
+  // Otherwise, call the recursive procedure again
+  else {
+    return num * factorialize(num - 1);
+    /* 
           First Part of the recursion method
           You need to remember that you won’t have just one call, you’ll have several nested calls
           
@@ -34,6 +30,6 @@ function factorialize(num) {
           If we sum up all the calls in one line, we have
           (5 * (5 - 1) * (4 - 1) * (3 - 1) * (2 - 1)) = 5 * 4 * 3 * 2 * 1 = 120
           */
-      }
   }
-  factorialize(5);
+}
+factorialize(5);

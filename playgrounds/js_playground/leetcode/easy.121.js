@@ -33,23 +33,23 @@ Constraints:
  * @return {number}
  */
 
-const maxProfit = function(prices) {
-    if (prices.length < 2) return 0;
+const maxProfit = function (prices) {
+  if (prices.length < 2) return 0;
 
-    let maxProfit = 0, 
-        minPrice = prices[0];
+  let maxProfit = 0,
+    minPrice = prices[0];
 
-    for (let i = 1; i < prices.length; i++) {
-        if (prices[i] < minPrice) {
-            minPrice = prices[i]
-        } else {
-            const tempProfit = prices[i] - minPrice;
-            maxProfit = Math.max(maxProfit, tempProfit);
-        }
+  for (let i = 1; i < prices.length; i++) {
+    if (prices[i] < minPrice) {
+      minPrice = prices[i];
+    } else {
+      const tempProfit = prices[i] - minPrice;
+      maxProfit = Math.max(maxProfit, tempProfit);
     }
+  }
 
-    return maxProfit;
+  return maxProfit;
 };
 
-maxProfit([7,1,5,3,6,4]) //?
+maxProfit([7, 1, 5, 3, 6, 4]); //?
 //maxProfit([7,6,4,3,1]) //?

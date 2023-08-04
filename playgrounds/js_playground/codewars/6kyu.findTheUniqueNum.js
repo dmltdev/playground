@@ -18,7 +18,7 @@ Find The Unique
 
 */
 
-//! Use an array.filter and find a unique number that only appears once in the array using array methods indexOf() and lastIndexOf(). 
+//! Use an array.filter and find a unique number that only appears once in the array using array methods indexOf() and lastIndexOf().
 //! Then convert the array with a single element to a string with array.join('') and wrap everything in Number().
 /*
 function findUniq(arr) {
@@ -28,7 +28,7 @@ function findUniq(arr) {
 
 //! An easier method using array.find(). Array.find() returns a value, while array.filter returns an array with matching values;
 function findUniq(arr) {
-    return arr.find(n => arr.indexOf(n) === arr.lastIndexOf(n));
+  return arr.find((n) => arr.indexOf(n) === arr.lastIndexOf(n));
 }
 
-console.log(findUniq([ 1, 1, 1, 2, 1, 1 ]));
+console.log(findUniq([1, 1, 1, 2, 1, 1]));

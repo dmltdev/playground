@@ -10,8 +10,11 @@ You can assume the array will always be valid, and there will always be one corr
 */
 
 function isSortedAndHow(array) {
-    return array.every((x,i) => i == 0 || array[i] >= array[i-1]) ? 'yes, ascending' :
-    array.every((x,i) => i == 0 | array[i] <= array[i-1]) ? 'yes, descending' : 'no'
+  return array.every((x, i) => i == 0 || array[i] >= array[i - 1])
+    ? "yes, ascending"
+    : array.every((x, i) => (i == 0) | (array[i] <= array[i - 1]))
+    ? "yes, descending"
+    : "no";
 }
 
-isSortedAndHow([1,0,1,4]) //?
+isSortedAndHow([1, 0, 1, 4]); //?

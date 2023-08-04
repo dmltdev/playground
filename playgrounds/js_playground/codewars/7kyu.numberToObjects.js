@@ -14,14 +14,14 @@ All inputs will be arrays of numbers. All character codes are valid lower case l
 */
 
 function numObj(nums) {
-    let res = [];
-    for (let i = 0; i < nums.length; i++) {
-        let temp = {};
-        Object.assign(temp, nums[i]);
-        temp[nums[i]] = String.fromCharCode(nums[i]);
-        res.push(temp);
-    }
-    return res;
+  let res = [];
+  for (let i = 0; i < nums.length; i++) {
+    let temp = {};
+    Object.assign(temp, nums[i]);
+    temp[nums[i]] = String.fromCharCode(nums[i]);
+    res.push(temp);
+  }
+  return res;
 }
 
-console.log(numObj([118,117,120])) //?
+console.log(numObj([118, 117, 120])); //?

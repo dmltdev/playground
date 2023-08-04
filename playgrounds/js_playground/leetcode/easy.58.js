@@ -26,9 +26,9 @@ Explanation: The last word is "joyboy" with length 6.
  * @param {string} s
  * @return {number}
  */
-const lengthOfLastWord = str => {
-    let words = str.trim().split(' ');
-    return words[words.length-1].length;
-}
+const lengthOfLastWord = (str) => {
+  let words = str.trim().split(" ");
+  return words[words.length - 1].length;
+};
 
-console.log(lengthOfLastWord('   fly me   to   the moon  '));
+console.log(lengthOfLastWord("   fly me   to   the moon  "));

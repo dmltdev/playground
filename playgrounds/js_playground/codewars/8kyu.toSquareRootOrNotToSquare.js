@@ -29,17 +29,17 @@ function squareOrSquareRoot(array) {
         return result;
     }
     */
-    
+
 //! Solution 2: A simpler imperative solution that relies on using a modulo operator to check if the number is integer or floating. The most performant and elegant solution.
 function squareOrSquareRoot(array) {
-    let result = [];
-    for (let i = 0; i < array.length; i++) {
-        let root = Math.sqrt(array[i]);
-        root % 1 === 0 ? result.push(root) : result.push(array[i] ** 2);
-    }
-    return result;
+  let result = [];
+  for (let i = 0; i < array.length; i++) {
+    let root = Math.sqrt(array[i]);
+    root % 1 === 0 ? result.push(root) : result.push(array[i] ** 2);
+  }
+  return result;
 }
-    
+
 //! Solution 3: Same as solution 2, but uses a declarative approach. Not bad, but I avoid it due to performance of array.map compared to for loop.
 /*
 function squareOrSquareRoot(array) {

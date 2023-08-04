@@ -22,15 +22,13 @@ const once = function(fn) {
 };
 */
 
-
 //! Solution 2: Similar to solution 1 but does not have an "if (hasBeenCalled)" check because the function implicitly returns undefined in that case
-const once = function(fn) {
+const once = function (fn) {
   let hasBeenCalled = false;
-  return function(...args){
+  return function (...args) {
     if (!hasBeenCalled) {
       hasBeenCalled = true;
       return fn(...args);
     }
-  }
+  };
 };
-

@@ -7,18 +7,26 @@ toBe(val) accepts another value and returns true if the two values === each othe
 notToBe(val) accepts another value and returns true if the two values !== each other. If they are equal, it should throw an error "Equal".
 */
 
-const expect = function(num1) {
-    return {
-        toBe: (num2) => {
-            return num1 === num2 ? true : (function() { throw new Error('Not Equal'); })();
-        },
-        notToBe: (num2) => {
-            return num1 === num2 ? (function() { throw new Error('Equal'); })() : true;
-        }
-    }
+const expect = function (num1) {
+  return {
+    toBe: (num2) => {
+      return num1 === num2
+        ? true
+        : (function () {
+            throw new Error("Not Equal");
+          })();
+    },
+    notToBe: (num2) => {
+      return num1 === num2
+        ? (function () {
+            throw new Error("Equal");
+          })()
+        : true;
+    },
+  };
 };
 
-expect(5).toBe(5) //?
-expect(6).toBe(5) //?
-expect(6).notToBe(5) //?
-expect(6).notToBe(6) //?
+expect(5).toBe(5); //?
+expect(6).toBe(5); //?
+expect(6).notToBe(5); //?
+expect(6).notToBe(6); //?

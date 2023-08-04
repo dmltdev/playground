@@ -16,7 +16,7 @@ function defineSuit(card) {
       break;
     default:
       return "No card suit in the string";
-      }
+  }
 }
 
 const test1 = 'Testing №2 for "Q♠"';

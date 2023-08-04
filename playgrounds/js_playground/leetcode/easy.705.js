@@ -36,19 +36,19 @@ At most 104 calls will be made to add, remove, and contains.
 */
 
 export default class MyHashSet {
-	constructor() {
-		this.hashSet = {};
-	}
+  constructor() {
+    this.hashSet = {};
+  }
 
-    add(key) {
-        this.hashSet[key] = true;
-    }
+  add(key) {
+    this.hashSet[key] = true;
+  }
 
-    remove(key) {
-        delete this.hashSet[key];
-    }
+  remove(key) {
+    delete this.hashSet[key];
+  }
 
-    contains(key) {
-        return this.hashSet.hasOwnProperty(key)
-    }
+  contains(key) {
+    return this.hashSet.hasOwnProperty(key);
+  }
 }

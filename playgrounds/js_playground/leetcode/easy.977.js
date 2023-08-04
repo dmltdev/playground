@@ -21,24 +21,24 @@ Output: [4,9,9,49,121]
  * @param {number[]} nums
  * @return {number[]}
  */
-const sortedSquares = function(nums) { // Two pointers
-    let left = 0, 
-    right = nums.length - 1, 
-    index = right, 
+const sortedSquares = function (nums) {
+  // Two pointers
+  let left = 0,
+    right = nums.length - 1,
+    index = right,
     res = [];
-    
 
-    while (index >= 0) {
-        if (Math.abs(nums[left]) > Math.abs(nums[right])) {
-            res[index--] = nums[left] ** 2;
-            left++;
-        } else {
-            res[index--] = nums[right] ** 2;
-            right--;
-        }
+  while (index >= 0) {
+    if (Math.abs(nums[left]) > Math.abs(nums[right])) {
+      res[index--] = nums[left] ** 2;
+      left++;
+    } else {
+      res[index--] = nums[right] ** 2;
+      right--;
     }
+  }
 
-    return res;
+  return res;
 };
 
-sortedSquares([-7,-3,2,3,11]) //?
+sortedSquares([-7, -3, 2, 3, 11]); //?

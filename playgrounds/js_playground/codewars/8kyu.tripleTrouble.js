@@ -7,14 +7,14 @@ E.g. Input: "aa", "bb" , "cc" => Output: "abcabc"
 Note: You can expect all of the inputs to be the same length.
 */
 
-function tripleTrouble(one, two, three){
-    let res = '';
-    for (let i = 0; i < one.length; i++) {
-        res += one[i];
-        res += two[i];
-        res += three[i]
-    }
-    return res;
+function tripleTrouble(one, two, three) {
+  let res = "";
+  for (let i = 0; i < one.length; i++) {
+    res += one[i];
+    res += two[i];
+    res += three[i];
+  }
+  return res;
 }
 
-tripleTrouble("aaa","bbb","ccc") //?
+tripleTrouble("aaa", "bbb", "ccc"); //?

@@ -24,8 +24,8 @@ function findMissing(arr1, arr2) {
 
 // !Solution 2: create a helper function reducer and use it as a callback function inside the .reduce method when calculating the difference between reducers of two arrays.
 function findMissing(arr1, arr2) {
-    const reducer = (accumulator, currentValue) => accumulator + currentValue
-    return arr1.reduce(reducer, 0) - arr2.reduce(reducer, 0);
+  const reducer = (accumulator, currentValue) => accumulator + currentValue;
+  return arr1.reduce(reducer, 0) - arr2.reduce(reducer, 0);
 }
 
 let array1 = [1, 2, 3];

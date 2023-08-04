@@ -13,9 +13,9 @@ Examples
 */
 
 function myLanguages(results) {
-    return Object.keys(results)
-      .filter(language => results[language] >= 60)
-      .sort((a, b) => results[b] - results[a]);
+  return Object.keys(results)
+    .filter((language) => results[language] >= 60)
+    .sort((a, b) => results[b] - results[a]);
 }
 
-console.log(myLanguages({"Java": 10, "Ruby": 80, "Python": 65}));
+console.log(myLanguages({ Java: 10, Ruby: 80, Python: 65 }));

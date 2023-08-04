@@ -34,28 +34,28 @@ Constraints:
 */
 
 const smallerNumbersThanCurrent = function (nums) {
-	const freq = new Uint16Array(101);
+  const freq = new Uint16Array(101);
 
-	for (const num of nums) {
-		freq[num]++;
-	}
+  for (const num of nums) {
+    freq[num]++;
+  }
 
-	let sum = 0;
-	let i = 0;
-	while (i < freq.length) {
-		const count = freq[i];
-		freq[i] = sum;
-		sum += count;
-		i++;
-	}
+  let sum = 0;
+  let i = 0;
+  while (i < freq.length) {
+    const count = freq[i];
+    freq[i] = sum;
+    sum += count;
+    i++;
+  }
 
-	const result = [];
-	for (const num of nums) {
-		result.push(freq[num]);
-	}
+  const result = [];
+  for (const num of nums) {
+    result.push(freq[num]);
+  }
 
-	return result;
+  return result;
 };
 
-let nums = [6,5,4,8];
-console.log(smallerNumbersThanCurrent(nums)) //?
+let nums = [6, 5, 4, 8];
+console.log(smallerNumbersThanCurrent(nums)); //?

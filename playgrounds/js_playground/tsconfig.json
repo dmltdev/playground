@@ -13,8 +13,5 @@
     "sourceMap": true,
     "declaration": true
   },
-  "exclude": [
-    "node_modules",
-    "ts.config.js"
-  ]
+  "exclude": ["node_modules", "ts.config.js"]
 }

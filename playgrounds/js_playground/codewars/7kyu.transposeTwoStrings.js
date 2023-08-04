@@ -21,20 +21,20 @@ If one string is longer than the other, there should be a space where the charac
 */
 
 function transposeTwoStrings(arr) {
-    const [str1, str2] = arr;
-    const maxLength = Math.max(arr[0].length, arr[1].length);
-    let result = '';
+  const [str1, str2] = arr;
+  const maxLength = Math.max(arr[0].length, arr[1].length);
+  let result = "";
 
-	for (let i = 0; i < maxLength; i++) {
-        const char1 = str1[i] || ' ';
-        const char2 = str2[i] || ' ';
-        result += `${char1} ${char2}`;
-        if (i < maxLength -1) {
-            result += '\n'
-        }
+  for (let i = 0; i < maxLength; i++) {
+    const char1 = str1[i] || " ";
+    const char2 = str2[i] || " ";
+    result += `${char1} ${char2}`;
+    if (i < maxLength - 1) {
+      result += "\n";
     }
+  }
 
-    return result;
+  return result;
 }
 
-console.log(transposeTwoStrings(['cat','']));
+console.log(transposeTwoStrings(["cat", ""]));

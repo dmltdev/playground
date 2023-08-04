@@ -1,17 +1,17 @@
 export default class HashSet {
-	constructor() {
-		this.hashSet = {};
-	}
+  constructor() {
+    this.hashSet = {};
+  }
 
-    add(key) {
-        this.hashSet[key] = true;
-    }
+  add(key) {
+    this.hashSet[key] = true;
+  }
 
-    remove(key) {
-        delete this.hashSet[key];
-    }
+  remove(key) {
+    delete this.hashSet[key];
+  }
 
-    contains(key) {
-        return this.hashSet.hasOwnProperty(key)
-    }
+  contains(key) {
+    return this.hashSet.hasOwnProperty(key);
+  }
 }

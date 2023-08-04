@@ -19,15 +19,15 @@ Output: ""
 Explanation: There is no common prefix among the input strings.
 */
 
-const longestCommonPrefix = function(strs) {
-    strs.sort();
-    for (let i = 0; i < strs[0].length; i++) {
-        if (strs[0][i] !== strs[strs.length - 1][i]) {
-            return strs[0].substr(0,i);
-        }
+const longestCommonPrefix = function (strs) {
+  strs.sort();
+  for (let i = 0; i < strs[0].length; i++) {
+    if (strs[0][i] !== strs[strs.length - 1][i]) {
+      return strs[0].substr(0, i);
     }
-    return strs[0];
+  }
+  return strs[0];
 };
 
-let test1 = ['flower','flow','flight'];
+let test1 = ["flower", "flow", "flight"];
 console.log(longestCommonPrefix(test1));

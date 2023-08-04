@@ -11,19 +11,19 @@ Initially, the value of X is 0.
 Given an array of strings operations containing a list of operations, return the final value of X after performing all the operations.
 */
 
-let finalValueAfterOperations = function(operations) {
-    let x = 0;
-    operations.forEach(operation => {
-        operation === "--X" ? --x : x;
-        operation === "X--" ? x-- : x;
-        operation === "++X" ? ++x : x;
-        operation === "X++" ? x++ : x;
-    })
-    return x;
+let finalValueAfterOperations = function (operations) {
+  let x = 0;
+  operations.forEach((operation) => {
+    operation === "--X" ? --x : x;
+    operation === "X--" ? x-- : x;
+    operation === "++X" ? ++x : x;
+    operation === "X++" ? x++ : x;
+  });
+  return x;
 };
 
-let ops = ["X++","++X","--X","X--"];
+let ops = ["X++", "++X", "--X", "X--"];
 console.log(finalValueAfterOperations(ops));
 
-let ops2 = ["++X","++X","X++"];
+let ops2 = ["++X", "++X", "X++"];
 console.log(finalValueAfterOperations(ops2));

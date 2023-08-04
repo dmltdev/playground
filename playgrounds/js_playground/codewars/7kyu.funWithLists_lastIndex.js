@@ -18,13 +18,13 @@ Good luck!
 */
 
 function lastIndexOf(head, value) {
-    let current = head;
-    let values = [];
+  let current = head;
+  let values = [];
 
-    while (current) {
-        values.push(current.data);
-        current = current.next;
-    }
+  while (current) {
+    values.push(current.data);
+    current = current.next;
+  }
 
-    return values.includes(value) ? values.lastIndexOf(value) : -1;
+  return values.includes(value) ? values.lastIndexOf(value) : -1;
 }

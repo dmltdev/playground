@@ -1,3 +1,3 @@
 export declare class Kata {
-    static getCount(str: string): number;
+  static getCount(str: string): number;
 }

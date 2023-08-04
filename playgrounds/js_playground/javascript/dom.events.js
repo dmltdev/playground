@@ -1,24 +1,24 @@
-// DOM Events 
+// DOM Events
 
 // Event Listener
 // Event Listener is a function that waits for an event to occur
-const button = document.querySelector('button');
-button.addEventListener('click', () => {
-    console.log('You clicked me!');
+const button = document.querySelector("button");
+button.addEventListener("click", () => {
+  console.log("You clicked me!");
 });
 
 // Event Handler
 // Event Handler is a function that is called when an event occurs
-const button2 = document.querySelector('button');
-button2.onclick = function() {
-    console.log('You clicked me!');
+const button2 = document.querySelector("button");
+button2.onclick = function () {
+  console.log("You clicked me!");
 };
 
 // Event Object
 // Event Object is an object that is passed to the event handler
-const button3 = document.querySelector('button');
-button3.addEventListener('click', (e) => {
-    console.log(e);
+const button3 = document.querySelector("button");
+button3.addEventListener("click", (e) => {
+  console.log(e);
 });
 
 // Event Bubbling

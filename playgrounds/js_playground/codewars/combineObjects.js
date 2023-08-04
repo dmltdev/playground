@@ -42,13 +42,16 @@ const combine = (...params) => params.reduce((a, b) => {
 */
 
 // Variant 4 The same as variant 3 but with better naming
-const combine = (...objects) => objects.reduce((accumulator, currentObject) => {
+const combine = (...objects) =>
+  objects.reduce((accumulator, currentObject) => {
     for (const key in currentObject) {
-        accumulator[key] = key in accumulator ? accumulator[key] + currentObject[key] : currentObject[key];
+      accumulator[key] =
+        key in accumulator
+          ? accumulator[key] + currentObject[key]
+          : currentObject[key];
     }
     return accumulator;
-}, {});
-
+  }, {});
 
 const objA = { a: 10, b: 20, c: 30 };
 const objB = { a: 3, c: 6, d: 3 };

@@ -30,32 +30,29 @@ the output should be
 As you can see, the masked number may be very large ;-)
 
 */
-    
+
 function isDivisibleBy6(str) {
-    let ret = []
-    for (let i = 0; i < 10; i++) {
-        let temp  = str.replace('*', i)
-        if (isDivisibleBy2(temp) && isDivisibleBy3(temp)) {
-            ret.push(temp);
-        }
-        
+  let ret = [];
+  for (let i = 0; i < 10; i++) {
+    let temp = str.replace("*", i);
+    if (isDivisibleBy2(temp) && isDivisibleBy3(temp)) {
+      ret.push(temp);
     }
-    return ret;
+  }
+  return ret;
 }
 
 function isDivisibleBy2(str) {
-    let lastDigit = Number(str.slice(-1));
-    return lastDigit % 2 === 0;
+  let lastDigit = Number(str.slice(-1));
+  return lastDigit % 2 === 0;
 }
 
 function isDivisibleBy3(str) {
-    var digits = str.split("").map(Number);
-    
-    var sum = digits.reduce((a,i) => a+i);
-    
-    return sum % 3 === 0;
+  var digits = str.split("").map(Number);
+
+  var sum = digits.reduce((a, i) => a + i);
+
+  return sum % 3 === 0;
 }
 
-isDivisibleBy6('1*0'); //?
-    
-    
+isDivisibleBy6("1*0"); //?

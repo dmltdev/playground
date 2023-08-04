@@ -26,9 +26,9 @@ Each string does not contain leading zeros except for the zero itself.
  * @param {string} b
  * @return {string}
  */
-const addBinary = function(a, b) {
-    let sum = BigInt(`0b${a}`) + BigInt(`0b${b}`)
-    return sum.toString(2);
+const addBinary = function (a, b) {
+  let sum = BigInt(`0b${a}`) + BigInt(`0b${b}`);
+  return sum.toString(2);
 };
 
-console.log(addBinary('1', '11')); //?
+console.log(addBinary("1", "11")); //?

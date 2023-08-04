@@ -33,15 +33,15 @@ word2:    p   q
 merged: a p b q c   d
 */
 
-const mergeAlternately = function(word1, word2) {
-    let res = '';
-    // let maxLength =[word1.length, word2.length].sort((a,b) => b - a)[0];
-    let maxLength = Math.max(word1.length, word2.length);
-    for (let i = 0; i < maxLength; i++) {
-        res += word1.slice(i, i+1);
-        res += word2.slice(i, i+1)
-    }
-    return res;
+const mergeAlternately = function (word1, word2) {
+  let res = "";
+  // let maxLength =[word1.length, word2.length].sort((a,b) => b - a)[0];
+  let maxLength = Math.max(word1.length, word2.length);
+  for (let i = 0; i < maxLength; i++) {
+    res += word1.slice(i, i + 1);
+    res += word2.slice(i, i + 1);
+  }
+  return res;
 };
 
-console.log(mergeAlternately('ab', 'pqrs'));
+console.log(mergeAlternately("ab", "pqrs"));

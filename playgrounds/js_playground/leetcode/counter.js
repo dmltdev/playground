@@ -1,6 +1,6 @@
 function createCounter(n) {
-    return function () {
-        return n++;
-    };
+  return function () {
+    return n++;
+  };
 }
 //# sourceMappingURL=counter.js.map

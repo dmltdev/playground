@@ -13,31 +13,31 @@ Note: the list may be null and can hold any type of value.
 */
 
 function indexOf(head, value) {
-    if (head === null) return -1;
+  if (head === null) return -1;
 
-    let count = 0;
-    let currentNode = head;
-    let nextNode = null;
+  let count = 0;
+  let currentNode = head;
+  let nextNode = null;
 
-    while (currentNode) {
-        if (currentNode.data === value) {
-            return count;
-        }
-        nextNode = currentNode.next;
-        count ++;
-        currentNode = nextNode;
+  while (currentNode) {
+    if (currentNode.data === value) {
+      return count;
     }
+    nextNode = currentNode.next;
+    count++;
+    currentNode = nextNode;
+  }
 
-    return -1
+  return -1;
 }
 
 //! Tests
 
-import LinkedList from '../dsa/singlyLinkedList.js'
+import LinkedList from "../dsa/singlyLinkedList.js";
 
 let list = new LinkedList();
 for (let i = 1; i < 4; i++) {
-    list.push(i)
+  list.push(i);
 }
 
-console.log(indexOf(list.head, 2))
+console.log(indexOf(list.head, 2));

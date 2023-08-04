@@ -10,9 +10,9 @@ export function number(array: string[]): string[]{
 */
 
 //! Second method using array.map
-export function number(array: string[]): string[]{
-    return array.map((el, i) => `${i+1}: ${el}`);
-  }
+export function number(array: string[]): string[] {
+  return array.map((el, i) => `${i + 1}: ${el}`);
+}
 
-let arr:string[] = ["a", "b", "c", "d"];
+let arr: string[] = ["a", "b", "c", "d"];
 console.log(number(arr));

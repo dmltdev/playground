@@ -6,17 +6,17 @@ The list will never be empty and will only contain values that are greater than 
 Good luck!
 */
 
-const sumSquareEvenRootOdd = nums => {
-    let sum = [];
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i] % 2 === 0) {
-            sum.push(Math.pow(nums[i], 2))
-        } else {
-            sum.push(Math.sqrt(nums[i]))
-        }
+const sumSquareEvenRootOdd = (nums) => {
+  let sum = [];
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] % 2 === 0) {
+      sum.push(Math.pow(nums[i], 2));
+    } else {
+      sum.push(Math.sqrt(nums[i]));
     }
-    return +sum.reduce((a,i) => a + i, 0).toFixed(2);
+  }
+  return +sum.reduce((a, i) => a + i, 0).toFixed(2);
 };
 
-let arr = [2,4,6,7];
-console.log(sumSquareEvenRootOdd(arr))
+let arr = [2, 4, 6, 7];
+console.log(sumSquareEvenRootOdd(arr));

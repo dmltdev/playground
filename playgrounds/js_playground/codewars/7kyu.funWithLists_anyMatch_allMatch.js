@@ -25,33 +25,33 @@ Good luck!
 */
 
 function anyMatch(head, p) {
-    let current = head;
-    while (current) {
-        if (p(current.data)) {
-            return true;
-        };
-        current = current.next;
+  let current = head;
+  while (current) {
+    if (p(current.data)) {
+      return true;
     }
-    return false;
+    current = current.next;
+  }
+  return false;
 }
 
 function allMatch(head, p) {
-    let current = head;
-    while (current) {
-        if (!p(current.data)) {
-            return false;
-        }
-        current = current.next
-    } 
-    return true;
+  let current = head;
+  while (current) {
+    if (!p(current.data)) {
+      return false;
+    }
+    current = current.next;
+  }
+  return true;
 }
 
 //! Tests
-import LinkedList from '../dsa/linkedList.js';
+import LinkedList from "../dsa/linkedList.js";
 
 let list = new LinkedList();
 for (let i = 1; i < 4; i++) {
-    list.push(i)
+  list.push(i);
 }
 
 let predicate1 = (x) => x > 1;

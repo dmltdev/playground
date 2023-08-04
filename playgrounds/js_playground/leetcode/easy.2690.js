@@ -10,7 +10,8 @@ An infinite-method object is defined as an object that allows you to call any me
 For example, if you execute obj.abc123(), it will return "abc123".
 */
 
-const createInfiniteObject = () => new Proxy({}, {get:(_, prop) => () => prop});
+const createInfiniteObject = () =>
+  new Proxy({}, { get: (_, prop) => () => prop });
 
 const obj = createInfiniteObject();
 obj.method();

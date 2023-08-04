@@ -3,32 +3,32 @@
 
 // Example 1
 function greet(name) {
-    console.log('Hello ' + name);
+  console.log("Hello " + name);
 }
 
 function greetWithCallback(name, callback) {
-    console.log('Hello ' + name);
-    callback();
+  console.log("Hello " + name);
+  callback();
 }
 
-greetWithCallback('John', function() {
-    console.log('This is a callback function');
+greetWithCallback("John", function () {
+  console.log("This is a callback function");
 });
 
 // Example 2
 
-const addTwo = num => {
-    return num + 2;
+const addTwo = (num) => {
+  return num + 2;
+};
+
+const checkConsistentOutput = (func, val) => {
+  const checkA = val + 2;
+  const checkB = func(val);
+  if (checkA === checkB) {
+    return func(val);
+  } else {
+    return "inconsistent results";
   }
-  
-  const checkConsistentOutput = (func, val) => {
-    const checkA = val + 2;
-    const checkB = func(val);
-    if (checkA === checkB) {
-      return func(val);
-    } else {
-      return 'inconsistent results';
-    }
-  }
-  
-  console.log(checkConsistentOutput(addTwo, 5));
+};
+
+console.log(checkConsistentOutput(addTwo, 5));

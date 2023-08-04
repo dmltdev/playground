@@ -35,22 +35,22 @@ The minimum possible difference is 2.
  * @param {number} k
  * @return {number}
  */
-const minimumDifference = function(nums, k) {
-    if (nums.length === 1) return 0
+const minimumDifference = function (nums, k) {
+  if (nums.length === 1) return 0;
 
-    let diff = Infinity
-    nums.sort((a,b) => a - b)
-    
-    let start = 0
-    let end = k - 1
-    
-    while (end < nums.length) {
-        diff = Math.min(diff, nums[end] - nums[start])
-        start++
-        end++
-    }
-    
-    return diff
+  let diff = Infinity;
+  nums.sort((a, b) => a - b);
+
+  let start = 0;
+  let end = k - 1;
+
+  while (end < nums.length) {
+    diff = Math.min(diff, nums[end] - nums[start]);
+    start++;
+    end++;
+  }
+
+  return diff;
 };
 
-console.log(minimumDifference([9,4,1,7], 2))
+console.log(minimumDifference([9, 4, 1, 7], 2));

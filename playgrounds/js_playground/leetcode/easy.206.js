@@ -19,31 +19,31 @@ Output: [5,4,3,2,1]
  * @return {ListNode}
  */
 
-let reverseList = function(head) {
-    if (!head) return head
-    
-    let currentNode = head
-    let prevNode = null
-    let nextNode = null
+let reverseList = function (head) {
+  if (!head) return head;
 
-    while (currentNode) {
-        nextNode = currentNode.next; 
-        currentNode.next = prevNode;
-        prevNode = currentNode;
-        currentNode = nextNode;
-    }
+  let currentNode = head;
+  let prevNode = null;
+  let nextNode = null;
 
-    return prevNode;
+  while (currentNode) {
+    nextNode = currentNode.next;
+    currentNode.next = prevNode;
+    prevNode = currentNode;
+    currentNode = nextNode;
+  }
+
+  return prevNode;
 };
 
 //! Tests
 
-import LinkedList from '../dsa/singlyLinkedList.js'
+import LinkedList from "../dsa/singlyLinkedList.js";
 
 let list = new LinkedList();
 for (let i = 1; i < 4; i++) {
-    list.push(i)
+  list.push(i);
 }
 
-console.log(list)
+console.log(list);
 console.log(reverseList(list.head));

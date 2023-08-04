@@ -34,16 +34,16 @@ Thus, the result should be [1,0].
  * @param {number[]} digits
  * @return {number[]}
  */
-const plusOne = function(digits) {
-    let num = (BigInt(digits.join('')) + 1n).toString();
-    let arr = [];
+const plusOne = function (digits) {
+  let num = (BigInt(digits.join("")) + 1n).toString();
+  let arr = [];
 
-    for (let i = 0; i < num.length; i++) {
-        let digit = parseInt(num[i]);
-        arr.push(digit);
-    }
+  for (let i = 0; i < num.length; i++) {
+    let digit = parseInt(num[i]);
+    arr.push(digit);
+  }
 
-    return arr;
+  return arr;
 };
 
 console.log(plusOne([9]));

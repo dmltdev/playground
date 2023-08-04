@@ -12,11 +12,11 @@ The index should be in the range [0..length-1]. If it is not, or if the list is 
 */
 
 function Node(data) {
-    this.data = data;
-    this.next = null;
+  this.data = data;
+  this.next = null;
 }
 
 function getNth(node, index) {
-    if (!node) throw new Error ('Invalid node at ' + index);
-    return (index === 0) ? node : getNth(node.next, index - 1);
+  if (!node) throw new Error("Invalid node at " + index);
+  return index === 0 ? node : getNth(node.next, index - 1);
 }

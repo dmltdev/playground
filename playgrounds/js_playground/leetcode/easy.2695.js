@@ -8,25 +8,25 @@ When the String() function is called on the instance, it will return a comma sep
 */
 
 class ArrayWrapper {
-    constructor(arr) {
-        this.array = arr;
-    }
+  constructor(arr) {
+    this.array = arr;
+  }
 
-    valueOf() {
-        let value = this.array.reduce((a, i) => a + i, 0);
-        return value;
-    }
+  valueOf() {
+    let value = this.array.reduce((a, i) => a + i, 0);
+    return value;
+  }
 
-    toString() {
-        let string = this.array.toString();
-        string = `[${string}]`;
-        return string;
-    }
+  toString() {
+    let string = this.array.toString();
+    string = `[${string}]`;
+    return string;
+  }
 }
 
-const obj1 = new ArrayWrapper([1,2]);
+const obj1 = new ArrayWrapper([1, 2]);
 console.log(obj1.valueOf());
-const obj2 = new ArrayWrapper([2,3]);
+const obj2 = new ArrayWrapper([2, 3]);
 console.log(obj1.toString());
 console.log(String(obj1));
 

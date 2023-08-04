@@ -15,15 +15,15 @@ Examples can be found in the test fixture.
 */
 
 function isLeapYear(year) {
-    if(0 == year % 400) return true;
-    if(0 == year % 100) return false;
-    if(0 == year % 4) return true;
-    return false;
+  if (0 == year % 400) return true;
+  if (0 == year % 100) return false;
+  if (0 == year % 4) return true;
+  return false;
 }
 
 //! Tests
-isLeapYear(1234) //? false
-isLeapYear(1984) //? true
-isLeapYear(2000) //? true
-isLeapYear(2010) //? false
-isLeapYear(2013) //? false
+isLeapYear(1234); //? false
+isLeapYear(1984); //? true
+isLeapYear(2000); //? true
+isLeapYear(2010); //? false
+isLeapYear(2013); //? false

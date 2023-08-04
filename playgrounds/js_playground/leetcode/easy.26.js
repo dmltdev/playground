@@ -50,19 +50,19 @@ nums is sorted in non-decreasing order.
  * @return {number}
  */
 
-//! Short explanation: since we know that the array is sorted, we declare a pointer that traverses through the array 
+//! Short explanation: since we know that the array is sorted, we declare a pointer that traverses through the array
 //! and, starting from the second element in the array, checks if its value is the same as the previous one.
 //! if yes, the element is removed from the initial array (to save up on memory and fulfil the problem's condition)
 //! and the counter k is incremented, which is returned by the function.
-const removeDuplicates = function(nums) {
-    let k = 1;
-    for (let i = 1; i < nums.length; i++) {
-        if (nums[i-1] !== nums[i]) {
-            nums[k] = nums[i];
-            k++;
-        }
+const removeDuplicates = function (nums) {
+  let k = 1;
+  for (let i = 1; i < nums.length; i++) {
+    if (nums[i - 1] !== nums[i]) {
+      nums[k] = nums[i];
+      k++;
     }
-    return k;
+  }
+  return k;
 };
 
-removeDuplicates([1,1,2]) //?
+removeDuplicates([1, 1, 2]); //?

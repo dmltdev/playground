@@ -22,20 +22,20 @@ const removeVowels = str => {
 }
 */
 
-const removeVowels = function(str) {
-    let set = new Set(['a','e','i','o','u']);
-    let res = "";
+const removeVowels = function (str) {
+  let set = new Set(["a", "e", "i", "o", "u"]);
+  let res = "";
 
-    for(let i of str){
-        if (!set.has(i)){
-            res += i;
-        }
+  for (let i of str) {
+    if (!set.has(i)) {
+      res += i;
     }
+  }
 
-    return res;
+  return res;
 };
 
-let s = 'aeiou';
-let s2 = 'leetcodeisacommunityforcoders'
-console.log(removeVowels(s)) // ''
+let s = "aeiou";
+let s2 = "leetcodeisacommunityforcoders";
+console.log(removeVowels(s)); // ''
 console.log(removeVowels(s2)); // "ltcdscmmntyfrcdrs"

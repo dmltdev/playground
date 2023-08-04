@@ -52,12 +52,12 @@ all functions accept and return a single integer
 
 const compose = function (functions) {
   return function (x) {
-    [...functions].reverse().forEach(fn => {
+    [...functions].reverse().forEach((fn) => {
       x = fn(x);
     });
     return x;
   };
 };
 
-const fn = compose([x => x + 1, x => x * x, x => 2 * x])
+const fn = compose([(x) => x + 1, (x) => x * x, (x) => 2 * x]);
 fn(4); //?

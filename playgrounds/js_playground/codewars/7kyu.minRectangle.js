@@ -26,8 +26,6 @@ Input range:
 */
 
 function minimumPerimeter(area) {
-    let factors = [1, area];
-    while (factors[0] + factors[1] === area) {        
-        
-    }
+  let factors = [1, area];
+  while (factors[0] + factors[1] === area) {}
 }

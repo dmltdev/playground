@@ -34,7 +34,7 @@ function dec2bin(dec) {
   return (dec >>> 0).toString(2);
 }
 function bin2dec(bin) {
-    return parseInt(bin, 2);
+  return parseInt(bin, 2);
 }
 console.log(dec2bin(16));
 console.log(bin2dec(11111111111111111111111111111110));

@@ -34,7 +34,7 @@ function arrayDiff(a, b) {
 
 //! Easy solution using an array.filter
 function arrayDiff(a, b) {
-    return a.filter(e => !b.includes(e));
+  return a.filter((e) => !b.includes(e));
 }
 
-console.log(arrayDiff([1,2,2], [1]));
+console.log(arrayDiff([1, 2, 2], [1]));

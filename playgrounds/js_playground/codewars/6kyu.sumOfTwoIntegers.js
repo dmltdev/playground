@@ -12,4 +12,4 @@ Javascript: the Array reduce methods are disabled, along with eval, require, and
 
 */
 
-const add = (x,y) => y ? add(x ^ y, (x & y) << 1) : x;
+const add = (x, y) => (y ? add(x ^ y, (x & y) << 1) : x);

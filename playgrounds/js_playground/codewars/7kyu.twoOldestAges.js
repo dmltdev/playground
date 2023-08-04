@@ -9,9 +9,9 @@ The order of the numbers passed in could be any order. The array will always inc
 */
 
 //! It would be better to use .toSpliced() not to mutate original array. However, VSCode currently does not recognize this ES2023 array method.
-function twoOldestAges(ages){
-    return ages.sort((a,b) => a - b).splice(-2);
+function twoOldestAges(ages) {
+  return ages.sort((a, b) => a - b).splice(-2);
 }
 
-let arr1 = [6,5,83,5,3,18];
+let arr1 = [6, 5, 83, 5, 3, 18];
 console.log(twoOldestAges(arr1));

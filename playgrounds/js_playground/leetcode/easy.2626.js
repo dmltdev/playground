@@ -61,18 +61,20 @@ Constraints:
 
 */
 
-const reduce = function(nums, fn, init) {
-    let res = init;
+const reduce = function (nums, fn, init) {
+  let res = init;
 
-    nums.forEach((n) => {
-        res = fn(res, n)
-    })
+  nums.forEach((n) => {
+    res = fn(res, n);
+  });
 
-    return res;
+  return res;
 };
 
-let nums = [1,2,3,4]
-let fn = function sum(accum, curr) { return accum + curr * curr; }
-let init = 100
+let nums = [1, 2, 3, 4];
+let fn = function sum(accum, curr) {
+  return accum + curr * curr;
+};
+let init = 100;
 
 console.log(reduce(nums, fn, init));

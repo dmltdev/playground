@@ -2,7 +2,7 @@ const getBtn = document.querySelector(".get-btn");
 const postbtn = document.querySelector(".post-btn");
 
 const getData = () => {
-  axios.get("https://reqres.in/api/users").then(response => {
+  axios.get("https://reqres.in/api/users").then((response) => {
     console.log(response);
   });
 };
@@ -14,17 +14,17 @@ const sendData = () => {
       {
         email: "eve.holt@reqres.in",
         password: "pistol",
-      }
+      },
       // {
       //   headers: {
       //     "Content-Type": "application/json",
       //   },
       // }
     )
-    .then(response => {
+    .then((response) => {
       console.log(response);
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err, err.response);
     });
 };

@@ -14,30 +14,30 @@ All values in arr will be >=0.
 */
 
 function dominator(arr) {
-    let maxCount = -1;
-    let dominatorValue = -1;
-    let set = new Set(arr);
-    
-    for (let element of set) {
-        let currentCount = 0;
-        
-        for (let i = 0; i < arr.length; i++) {
-            if (element === arr[i]) {
-                currentCount++;
-            }
-        }
-        
-        if (currentCount > maxCount) {
-            maxCount = currentCount;
-            dominatorValue = element;
-        }
-    }
-    
-    if (maxCount > arr.length / 2) {
-        return dominatorValue;
-    } else {
-        return -1;
-    }
-} 
+  let maxCount = -1;
+  let dominatorValue = -1;
+  let set = new Set(arr);
 
-console.log(dominator([3,4,3,2,3,1,3,3]))
+  for (let element of set) {
+    let currentCount = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+      if (element === arr[i]) {
+        currentCount++;
+      }
+    }
+
+    if (currentCount > maxCount) {
+      maxCount = currentCount;
+      dominatorValue = element;
+    }
+  }
+
+  if (maxCount > arr.length / 2) {
+    return dominatorValue;
+  } else {
+    return -1;
+  }
+}
+
+console.log(dominator([3, 4, 3, 2, 3, 1, 3, 3]));

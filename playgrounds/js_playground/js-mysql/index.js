@@ -12,13 +12,13 @@ app.get("/createDatabase", (req, res) => {
 
   let createQuery = `CREATE DATABASE ${databaseName}`;
 
-  database.query(createQuery, err => {
+  database.query(createQuery, (err) => {
     if (err) throw err;
 
     console.log("Database Created Successfully!");
 
     let useQuery = `USE ${databaseName}`;
-    database.query(useQuery, err => {
+    database.query(useQuery, (err) => {
       if (err) throw err;
 
       console.log("Using database");

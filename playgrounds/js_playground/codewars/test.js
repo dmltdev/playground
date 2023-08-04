@@ -1,4 +1,4 @@
-(function() {
-setTimeout(() => console.log("4"), 2000);
-console.log("2")
+(function () {
+  setTimeout(() => console.log("4"), 2000);
+  console.log("2");
 })();

@@ -20,7 +20,12 @@ function validateHello(greetings) {
 
 function validateHello(greetings) {
   const list = ["hello", "ciao", "salut", "hallo", "hola", "ahoj", "czesc"];
-  const words = [...greetings.toLowerCase().replace(/[^a-z]/g, " ").split(" ")];
+  const words = [
+    ...greetings
+      .toLowerCase()
+      .replace(/[^a-z]/g, " ")
+      .split(" "),
+  ];
   for (const word of words) {
     if (list.includes(word)) {
       return true;
@@ -29,7 +34,10 @@ function validateHello(greetings) {
   return false;
 }
 
-
 // Tests
 
-console.log(validateHello('BiEN? DOiNG, tREs. how TSChusS? tsChUss, wIE, doiNg hoMbRE hoMbRE: are LA HoLA ARE paSa, BiEn, TrEs ViSTa'));
+console.log(
+  validateHello(
+    "BiEN? DOiNG, tREs. how TSChusS? tsChUss, wIE, doiNg hoMbRE hoMbRE: are LA HoLA ARE paSa, BiEn, TrEs ViSTa",
+  ),
+);

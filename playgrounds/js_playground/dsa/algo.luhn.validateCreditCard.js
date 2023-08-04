@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /*
 Luhn algorithm is a simple checksum formula used to 
@@ -18,33 +18,32 @@ The Luhn Formula:
 -- The check digit (the last number of the card) is the amount that you would need to add to get a multiple of 10 (Modulo 10)
 */
 
-const validateCreditCard = input => {
+const validateCreditCard = (input) => {
+  if (typeof input !== "string") {
+    input = input.toString();
+  }
 
-    if (typeof input !== 'string') {
-        input = input.toString();
-    }
+  let creditCardInt = input.split("").map(Number);
 
-    let creditCardInt = input.split('').map(Number);
-    
-    for (let i = creditCardInt.length -2; i >= 0; i = i -2) {
-        let tempValue = creditCardInt[i];
-        tempValue *= 2;
-        if (tempValue > 9) {
-            tempValue = tempValue % 10 + 1;
-        }
-        creditCardInt[i] = tempValue;
+  for (let i = creditCardInt.length - 2; i >= 0; i = i - 2) {
+    let tempValue = creditCardInt[i];
+    tempValue *= 2;
+    if (tempValue > 9) {
+      tempValue = (tempValue % 10) + 1;
     }
-    
-    let total = 0;
-    
-    for (let i = 0; i < creditCardInt.length; i++) {
-        total += creditCardInt[i];
-    }
-    
-    return total % 10 === 0;
+    creditCardInt[i] = tempValue;
+  }
+
+  let total = 0;
+
+  for (let i = 0; i < creditCardInt.length; i++) {
+    total += creditCardInt[i];
+  }
+
+  return total % 10 === 0;
 };
 
 // Test
 console.log(validateCreditCard(4929268955333011));
-console.log(validateCreditCard('7992 7398 710'));
+console.log(validateCreditCard("7992 7398 710"));
 console.log(validateCreditCard(79927398710));

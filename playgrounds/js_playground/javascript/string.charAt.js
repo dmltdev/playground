@@ -8,7 +8,7 @@
 
 // Example
 
-const str = 'Hello World!';
+const str = "Hello World!";
 console.log(str.charAt(0)); // H
 console.log(str.charAt(1)); // e
 console.log(str.charAt(2)); // l

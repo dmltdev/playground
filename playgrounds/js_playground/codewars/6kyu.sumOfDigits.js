@@ -14,11 +14,14 @@ Examples
 */
 
 function digitalRoot(n) {
-    let reduced = [...n.toString().split('')].reduce((acc, curr) => acc + Number(curr),0);
-    if (reduced.toString().length > 1) {
-        return digitalRoot(reduced);
-    }
-    return reduced;
+  let reduced = [...n.toString().split("")].reduce(
+    (acc, curr) => acc + Number(curr),
+    0,
+  );
+  if (reduced.toString().length > 1) {
+    return digitalRoot(reduced);
+  }
+  return reduced;
 }
 
-digitalRoot(165) //?
+digitalRoot(165); //?

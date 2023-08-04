@@ -7,17 +7,17 @@ such as madam or racecar, the date and time 12/21/33 12:21, and the sentence: "A
 */
 
 function isPalindrome(x) {
-    x = x.toLowerCase();
-    let left = 0;
-    let right = x.length - 1
+  x = x.toLowerCase();
+  let left = 0;
+  let right = x.length - 1;
 
-    while (left < right) {
-        if (x[left] !== x[right]) {
-            return false
-        } 
-        left += 1;
-        right -= 1;
+  while (left < right) {
+    if (x[left] !== x[right]) {
+      return false;
     }
+    left += 1;
+    right -= 1;
+  }
 
-    return true;
+  return true;
 }

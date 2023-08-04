@@ -1,1 +1,9 @@
-div{display:block}div.content{position:relative}.red{color:red}
+div {
+  display: block;
+}
+div.content {
+  position: relative;
+}
+.red {
+  color: red;
+}

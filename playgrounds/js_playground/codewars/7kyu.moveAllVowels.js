@@ -12,17 +12,18 @@ Examples
 */
 
 function moveVowel(input) {
-    const vowels = ['a','e','i','o','u']
-    
-    let res = [], resVowels = [];
-    for (let i = 0; i < input.length; i++) {
-        if (vowels.includes(input[i])) {
-            resVowels.push(input[i]); 
-        } else {
-            res.push(input[i]);
-        }
+  const vowels = ["a", "e", "i", "o", "u"];
+
+  let res = [],
+    resVowels = [];
+  for (let i = 0; i < input.length; i++) {
+    if (vowels.includes(input[i])) {
+      resVowels.push(input[i]);
+    } else {
+      res.push(input[i]);
     }
-    return res.concat(resVowels).join('');
+  }
+  return res.concat(resVowels).join("");
 }
 
-moveVowel('peace') //?
+moveVowel("peace"); //?

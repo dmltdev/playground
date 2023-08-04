@@ -7,11 +7,11 @@ let db_con = mysql.createConnection({
 });
 
 db_con.connect((err) => {
-    if (err) {
-        console.log("Database Connection Failed!", err);
-    } else {
-        console.log("Database connection successful")
-    }
-})
+  if (err) {
+    console.log("Database Connection Failed!", err);
+  } else {
+    console.log("Database connection successful");
+  }
+});
 
 module.exports = db_con;

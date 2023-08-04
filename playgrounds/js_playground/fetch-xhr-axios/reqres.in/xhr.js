@@ -30,7 +30,7 @@ const sendHttpRequest = (method, url, data) => {
 };
 
 const getData = () => {
-  sendHttpRequest("GET", "https://reqres.in/api/users").then(responseData => {
+  sendHttpRequest("GET", "https://reqres.in/api/users").then((responseData) => {
     console.log(responseData);
   });
 };
@@ -40,10 +40,10 @@ const sendData = () => {
     email: "eve.holt@reqres.in",
     password: "pistol",
   })
-    .then(responseData => {
+    .then((responseData) => {
       console.log(responseData);
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
     });
 };

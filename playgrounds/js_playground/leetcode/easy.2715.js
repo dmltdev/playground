@@ -8,14 +8,14 @@ After a delay of t, fn should be called with args passed as parameters unless ca
 
 */
 
-const cancellable = function(fn, args, t) {
-    const timeout = setTimeout(() => {
-      fn(...args)
-    }, t)
+const cancellable = function (fn, args, t) {
+  const timeout = setTimeout(() => {
+    fn(...args);
+  }, t);
 
-    const cancelFn = () => clearTimeout(timeout);
+  const cancelFn = () => clearTimeout(timeout);
 
-    return cancelFn;
+  return cancelFn;
 };
 
 // !Test
