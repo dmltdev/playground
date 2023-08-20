@@ -119,29 +119,32 @@ const join = function (arr1, arr2) {
 
   const joinedArray = [];
 
-  while (i < arr1.length && i < arr2.length) {
-    if (arr1[i].id === arr2[i].id) {
-      joinedArray.push({ ...arr1[i], ...arr2[i] });
+  while (i < arr1.length && j < arr2.length) {
+    if (arr1[i].id === arr2[j].id) {
+      joinedArray.push({ ...arr1[i], ...arr2[j] });
       i++;
       j++;
       continue;
     }
 
-    if (arr1[i].id < arr2[i].id) {
+    if (arr1[i].id < arr2[j].id) {
       joinedArray.push({ ...arr1[i] });
       i++;
       continue;
     }
 
-    joinedArray.push({ ...arr2[i] });
+    joinedArray.push({ ...arr2[j] });
+    j++;
   }
 
   while (i < arr1.length) {
     joinedArray.push({ ...arr1[i] });
+    i++;
   }
 
   while (j < arr2.length) {
     joinedArray.push({ ...arr2[j] });
+    j++;
   }
 
   return joinedArray;
