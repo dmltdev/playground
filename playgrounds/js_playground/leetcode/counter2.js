@@ -1,10 +1,11 @@
+"use strict";
 function createCounter(init) {
-  let num = init;
-  return {
-    increment: () => ++num,
-    decrement: () => --num,
-    reset: () => (num = init),
-  };
+    let num = init;
+    return {
+        increment: () => ++num,
+        decrement: () => --num,
+        reset: () => (num = init),
+    };
 }
 let counter = createCounter(5); //?
 counter.increment(); //?

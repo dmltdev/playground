@@ -1,1 +1,1 @@
-{"version":3,"file":"counter.js","sourceRoot":"","sources":["counter.ts"],"names":[],"mappings":"AAAA,SAAS,aAAa,CAAC,CAAS;IAC5B,OAAO;QACH,OAAO,CAAC,EAAE,CAAC;IACf,CAAC,CAAA;AACL,CAAC"}
+{"version":3,"file":"counter.js","sourceRoot":"","sources":["counter.ts"],"names":[],"mappings":";AAAA,SAAS,aAAa,CAAC,CAAS;IAC9B,OAAO;QACL,OAAO,CAAC,EAAE,CAAC;IACb,CAAC,CAAC;AACJ,CAAC"}
