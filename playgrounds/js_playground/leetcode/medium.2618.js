@@ -59,13 +59,13 @@ function checkIfInstanceOf(obj: any, classFunction: any): boolean {
 */
 //! Solution 2: Built-in instanceof method
 function checkIfInstanceOf(obj, classFunction) {
-  if (obj === null || obj === undefined || typeof classFunction !== "function")
-    return false;
-  let inputObj = obj;
-  if (typeof obj !== "object") {
-    inputObj = Object(obj);
-  }
-  return inputObj instanceof classFunction;
+    if (obj === null || obj === undefined || typeof classFunction !== "function")
+        return false;
+    let inputObj = obj;
+    if (typeof obj !== "object") {
+        inputObj = Object(obj);
+    }
+    return inputObj instanceof classFunction;
 }
 //! Solution 3: Iterating through prototype chain with a generator function
 /*
@@ -87,5 +87,5 @@ function checkIfInstanceOf(obj: any, classFunction: any): boolean {
 
   return false;
 }
-*/
+*/ 
 //# sourceMappingURL=medium.2618.js.map
