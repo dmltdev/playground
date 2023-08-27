@@ -9,16 +9,16 @@ let badWord = "freaking";
 // console.log(storyWords);
 
 let count = 0;
-storyWords.forEach((word) => {
+storyWords.forEach(word => {
   count++;
 });
 // console.log(count); // Output: 181
 
-storyWords = storyWords.filter((word) => {
+storyWords = storyWords.filter(word => {
   return word != unnecessaryWord;
 });
 
-storyWords = storyWords.map((word) => {
+storyWords = storyWords.map(word => {
   if (word === misspelledWord) {
     return "beautiful";
   } else {
@@ -26,7 +26,7 @@ storyWords = storyWords.map((word) => {
   }
 });
 
-const badWordIndex = storyWords.findIndex((word) => {
+const badWordIndex = storyWords.findIndex(word => {
   if (word === badWord) {
     return word;
   }
@@ -34,12 +34,12 @@ const badWordIndex = storyWords.findIndex((word) => {
 // console.log(badWordIndex); // Output: 78
 storyWords[78] = "really";
 
-const lengthCheck = storyWords.every((word) => {
+const lengthCheck = storyWords.every(word => {
   return word.length <= 10;
 });
 // console.log(lengthCheck); // Output: false
 
-storyWords = storyWords.map((word) => {
+storyWords = storyWords.map(word => {
   if (word.length > 10) {
     const wordsArr = ["stunning", "dazzling", "glorious"];
     let randomIndex = Math.floor(Math.random() * wordsArr.length);
