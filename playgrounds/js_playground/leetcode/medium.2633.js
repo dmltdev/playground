@@ -47,15 +47,9 @@ all strings will only contain alphanumeric characters
  * @return {string}
  */
 const jsonStringify = function (object) {
+  if (object === null) return "null";
   if (typeof object === "string") {
     return `"${object}"`;
-  }
-  if (
-    typeof object === "number" ||
-    typeof object === "boolean" ||
-    object === null
-  ) {
-    return String(object);
   }
   if (Array.isArray(object)) {
     let result = "[";
@@ -72,6 +66,7 @@ const jsonStringify = function (object) {
     result += "}";
     return result;
   }
+  return String(object);
 };
 
 let test = { a: "str", b: -12, c: true, d: null };
