@@ -1,0 +1,229 @@
+{
+  "todos": [
+    {
+      "checked": true,
+      "title": "Complete math assignment",
+      "description": "Finish the remaining exercises in the calculus workbook",
+      "id": "1"
+    },
+    {
+      "checked": true,
+      "title": "Call the insurance company",
+      "description": "desc7",
+      "id": "2"
+    },
+    {
+      "checked": true,
+      "title": "Buy groceries",
+      "description": "Purchase fruits, vegetables, and dairy products",
+      "id": "3"
+    },
+    {
+      "title": "Prepare for presentation",
+      "description": "Organize the slides and rehearse the key points",
+      "id": "4",
+      "checked": true
+    },
+    {
+      "title": "Plan weekend trip",
+      "description": "Research potential destinations and accommodation options",
+      "id": "5",
+      "checked": true
+    },
+    {
+      "checked": true,
+      "title": "Pay electricity bill",
+      "description": "Check the due date and complete the online payment",
+      "id": "6"
+    },
+    {
+      "checked": true,
+      "title": "Organize closet",
+      "description": "Sort out clothes and donate the ones not in use",
+      "id": "7"
+    },
+    {
+      "checked": true,
+      "title": "Schedule car maintenance",
+      "description": "Book an appointment with the local auto repair shop",
+      "id": "8"
+    },
+    {
+      "title": "Attend yoga class",
+      "description": "Pack the essentials and head to the 6 p.m. session at the yoga studio",
+      "id": "9",
+      "checked": true
+    }
+  ],
+  "user": {
+    "userName": "CodeGenix"
+  },
+  "cart": {
+    "totalCost": "130$",
+    "products": [
+      "hotdog",
+      "pizza",
+      "extra sauce"
+    ]
+  },
+  "products": [
+    {
+      "id": "1",
+      "title": "IPhone"
+    },
+    {
+      "id": "2",
+      "title": "Laptop"
+    },
+    {
+      "id": "3",
+      "title": "Monitor"
+    },
+    {
+      "id": "4",
+      "title": "Speaker"
+    },
+    {
+      "title": "Microphone",
+      "id": "5"
+    },
+    {
+      "title": "Camera",
+      "id": "6"
+    },
+    {
+      "title": "Camera 2",
+      "id": "7"
+    },
+    {
+      "title": "Phone2",
+      "id": "8"
+    },
+    {
+      "title": "Phone3",
+      "id": "9"
+    },
+    {
+      "title": "Phone4",
+      "id": "10"
+    },
+    {
+      "title": "Phone5",
+      "id": "11"
+    },
+    {
+      "title": "Phone7",
+      "id": "12"
+    },
+    {
+      "title": "Phone8",
+      "id": "13"
+    },
+    {
+      "title": "Phone9",
+      "id": "14"
+    },
+    {
+      "title": "Phone10",
+      "id": "15"
+    },
+    {
+      "title": "Phone11",
+      "id": "16"
+    },
+    {
+      "title": "Phone12",
+      "id": "17"
+    },
+    {
+      "title": "phone13",
+      "id": "18"
+    },
+    {
+      "title": "phone14",
+      "id": "19"
+    },
+    {
+      "id": "7910",
+      "title": "New Microphone"
+    },
+    {
+      "id": "f424",
+      "title": "Camera 3"
+    },
+    {
+      "id": "438a",
+      "title": "Camera 4"
+    },
+    {
+      "id": "0e97",
+      "title": "Camera 5"
+    },
+    {
+      "id": "8c5d",
+      "title": "Camera 6"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "title": "10 Easy Recipes for Beginner Cooks"
+    },
+    {
+      "id": "2",
+      "title": "7 Lucrative Tips to Make Money From Home"
+    },
+    {
+      "id": "3",
+      "title": "Healthy Breakfast Recipes: 5 Quick and Easy Ideas"
+    },
+    {
+      "id": "4",
+      "title": "How Can You Grow Your YouTube Channel?"
+    },
+    {
+      "id": "5",
+      "title": "What Is SEO and Why Should You Care?"
+    },
+    {
+      "id": "6",
+      "title": "10 Tips for Growing Your YouTube Channel"
+    },
+    {
+      "id": "7",
+      "title": "5 SEO Strategies You Need to Know Now"
+    },
+    {
+      "id": "8",
+      "title": "This is Why Your YouTube Channel Needs a Good Title"
+    },
+    {
+      "id": "9",
+      "title": "10 Unbelievable Ways to Boost Your YouTube Views"
+    },
+    {
+      "id": "10",
+      "title": "How I Achieved 1000 Subscribers in 3 Months"
+    },
+    {
+      "id": "11",
+      "title": "Top 5 YouTube Trends of 2023"
+    },
+    {
+      "id": "12",
+      "title": "The Secret to a Successful YouTube Channel"
+    },
+    {
+      "id": "13",
+      "title": "5 Ways to Engage Your Audience on YouTube"
+    },
+    {
+      "id": "14",
+      "title": "How to Use YouTube's Algorithm to Your Advantage"
+    },
+    {
+      "id": "15",
+      "title": "The Impact of Thumbnails on Your YouTube Video Success"
+    }
+  ]
+}
