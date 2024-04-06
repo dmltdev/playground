@@ -5,7 +5,7 @@ import { useProducts } from '../services/queries';
 import { useState, ChangeEvent } from 'react';
 
 export default function Products() {
-  const { data, mutate } = useProducts();
+  const { data, mutate, isValidating } = useProducts();
   const { trigger, isMutating } = useCreateProduct();
 
   const [inputValue, setInputValue] = useState('');
@@ -20,7 +20,17 @@ export default function Products() {
     // });
     // mutate();
 
-    trigger({ title: inputValue });
+    trigger(
+      { title: inputValue },
+      {
+        // optimisticData: data && [
+        //   ...data,
+        //   { title: `${inputValue} (optimistic data)` },
+        // ],
+        optimisticData: data && [...data, { title: inputValue }],
+        rollbackOnError: true, //! always use to rollback on error
+      }
+    );
   };
 
   return (
@@ -36,7 +46,11 @@ export default function Products() {
         value={inputValue}
         onChange={handleInputValueUpdate}
       />
-      <button onClick={handleCreateProduct}>Create</button>
+      <button
+        onClick={handleCreateProduct}
+        disabled={isMutating || isValidating}>
+        {isMutating || isValidating ? 'Creating...' : 'Create Product'}
+      </button>
     </div>
   );
 }
