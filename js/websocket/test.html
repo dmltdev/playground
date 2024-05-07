@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="custom-form">
+      <input type="text" name="" id="" />
+      <input type="text" name="" id="" />
+      <input type="text" name="" id="" />
+      <input type="text" name="" id="" />
+    </form>
+  </body>
+  <script>
+    const inputs = document.querySelectorAll('#custom-form input');
+    inputs.forEach(input => {
+      function handleChange(event) {
+        const delayedEffect = setTimeout(() => {
+          console.log('handling input change');
+          console.log(event.target.value);
+        }, 100); // debounce 0.1s
+      }
+
+      input.addEventListener('change', handleChange);
+    });
+  </script>
+</html>
